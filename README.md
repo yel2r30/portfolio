@@ -1,6 +1,6 @@
 # portfolio
 
-**RIN Portfolio**는 게임 크리에이터 RIN의 개인 포트폴리오입니다. HOME, WORKS, 11개 프로젝트의 상세 페이지를 제공합니다. 기본 언어는 한국어이며 영어 전환과 시스템·라이트·다크 테마 선택을 지원합니다.
+**RIN Portfolio**는 게임 디자이너 RIN의 개인 포트폴리오입니다. HOME, WORKS, 11개 프로젝트의 상세 페이지를 제공합니다. 기본 언어는 한국어이며 영어 전환과 시스템·라이트·다크 테마 선택을 지원합니다.
 
 공식 개발 저장소는 [`yel2r30/portfolio`](https://github.com/yel2r30/portfolio)이며 기본 브랜치는 `main`입니다.
 
@@ -47,4 +47,12 @@ Vite의 `base`는 프로젝트 사이트 경로인 `/portfolio/`입니다. `publ
 - 선택 필드 `period`는 제작 기간, `image`는 대표 이미지, `images`는 추가 이미지, `links`는 확인한 외부 링크를 담습니다. 이미지는 `{ src: 'assets/파일명', alt: { ko, en } }`, 링크는 `{ label: { ko, en }, url: 'https://...' }` 형태입니다. 이미지 로딩 실패 시 준비 중 썸네일로 대체합니다.
 - `sections`의 `gameplay`, `contribution`, `process`, `results`에 언어별 문단 배열을 넣습니다. 자료가 없는 섹션은 표시하지 않습니다. 향후 `easterEgg` 선택 필드를 프로젝트 데이터에 추가할 수 있으며 이번 구현에는 실행 로직이 없습니다.
 - 테마 팔레트는 `src/styles.css`의 CSS 변수로 관리합니다. 수동 테마는 `rin-theme` 키로 브라우저에 저장하고 시스템 선택 시 저장값을 제거합니다.
-- 현재 실제 이미지, 확인된 외부 링크, 연락처는 제공되지 않아 준비 상태입니다. 기획 과정과 회고는 확인된 자료가 확보되면 추가합니다.
+- 프로젝트 실제 이미지와 플레이·스토어 링크는 아직 준비 상태입니다. Contact에는 확인된 GitHub 프로필을 표시합니다. 기획 과정과 회고는 확인된 자료가 확보되면 추가합니다.
+
+## DEV-003 구성
+
+HOME은 Hero → Selected Works → What I Design → Experience & Highlights → Behind the Games 순서입니다. 공식 직함은 Game Designer, 중심 분야는 Gameplay & System Design입니다.
+
+`src/data/designerContent.js`에서 HOME의 역량 설명, 경험 요약과 공개 연락 링크를 관리합니다. 프로젝트의 `cardRole`은 카드에 사용하는 짧은 역할 요약이고 `roles`는 상세 페이지의 전체 기여 범위입니다. `focus`에는 프로젝트가 보여 주는 역량을 기록합니다. 상태와 성과는 사용자 확인 자료를 기준으로 관리하며, 2026 지스타 출품 예정 상태를 유지합니다.
+
+DEV-003은 검토용 PR로 제출하며 사용자 승인 후 병합 및 배포합니다.
