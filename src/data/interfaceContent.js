@@ -15,6 +15,10 @@ export const interfaceContent = {
     selectedText: "게임의 핵심 경험을 고민하며 제작한 대표 프로젝트입니다.",
     what: "What I Design",
     contact: "Contact",
+    contactNav: "CONTACT",
+    additionalMaterials: "추가 자료",
+    pendingProcess: "상세 기획 및 제작 과정은 정리 중입니다.",
+    pendingResults: "결과 및 회고 자료는 준비 중입니다.",
     worksIntro:
       "게임의 규칙을 설계하고, 만들고, 플레이하며 다듬어 온 작업들입니다.",
     all: "전체",
@@ -60,6 +64,10 @@ export const interfaceContent = {
     selectedText: "Selected projects built around distinctive gameplay ideas.",
     what: "What I Design",
     contact: "Contact",
+    contactNav: "CONTACT",
+    additionalMaterials: "Additional Materials",
+    pendingProcess: "Detailed design and development process materials are being prepared.",
+    pendingResults: "Results and retrospective materials are being prepared.",
     worksIntro:
       "Games and projects shaped through design, prototyping, and iteration.",
     all: "All",

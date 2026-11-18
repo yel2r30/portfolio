@@ -103,5 +103,6 @@ export const experienceHighlights = [
 ];
 
 export const contactLinks = [
-  { label: "GitHub", url: "https://github.com/yel2r30" },
+  { label: "Email", value: "joy6420@naver.com", url: "mailto:joy6420@naver.com" },
+  { label: "GitHub", value: "github.com/yel2r30", url: "https://github.com/yel2r30" },
 ];

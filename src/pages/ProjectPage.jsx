@@ -17,6 +17,10 @@ export function ProjectPage({ project, language, content }) {
       ? project.environment
       : localize(project.environment, language);
   const sections = project.sections || {};
+  const pendingDetails = [
+    !sections.process?.length && content.pendingProcess,
+    !sections.results?.length && content.pendingResults,
+  ].filter(Boolean);
   const links = (project.links || []).filter((link) =>
     /^https?:\/\//.test(link.url),
   );
@@ -115,6 +119,12 @@ export function ProjectPage({ project, language, content }) {
             </div>
           </section>
         ))}
+      {pendingDetails.length > 0 && (
+        <section className="detail-section pending-section">
+          <h2>{content.additionalMaterials}</h2>
+          <div><p>{pendingDetails.join(" ")}</p></div>
+        </section>
+      )}
       {links.length > 0 && (
         <section className="detail-section">
           <h2>{content.links}</h2>

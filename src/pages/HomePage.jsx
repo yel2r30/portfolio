@@ -90,20 +90,23 @@ export function HomePage({ language, content }) {
           ))}
         </div>
       </section>
-      <section className="section contact">
+      <section id="contact" className="section contact">
         <h2>Behind the Games</h2>
         <p className="about-text">{content.about}</p>
-        <div className="contact-links">
-          <span>{content.contact}</span>
+        <div className="contact-links" aria-label={content.contact}>
+          <h3>{content.contact}</h3>
           {contactLinks.map((link) => (
             <a
-              className="text-link"
+              className="contact-link"
               key={link.url}
               href={link.url}
-              target="_blank"
-              rel="noreferrer"
+              target={link.url.startsWith("https://") ? "_blank" : undefined}
+              rel={link.url.startsWith("https://") ? "noopener noreferrer" : undefined}
             >
-              {link.label} ↗
+              <span className="contact-label">{link.label}</span>
+              <span className="contact-value">
+                {link.value} <span aria-hidden="true">↗</span>
+              </span>
             </a>
           ))}
         </div>

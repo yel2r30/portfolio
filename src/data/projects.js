@@ -303,8 +303,8 @@ export const projects = [
     team: text("팀 프로젝트", "Team project"),
     roles: [
       text(
-        "AI 활용 프로그래밍 일부 참여 · 상대적으로 작은 기여",
-        "Limited contribution to AI-assisted programming",
+        "핵심 게임 기능 구현 (AI 활용)",
+        "Core gameplay implementation (AI-assisted)",
       ),
     ],
     color: "#d9d5df",
@@ -318,16 +318,16 @@ export const projects = [
     sections: {
       contribution: [
         text(
-          "AI 활용 프로그래밍에 참여했습니다. 본인 기여 비중은 상대적으로 적습니다.",
-          "Contributed to AI-assisted programming. My contribution was relatively limited.",
+          "게임의 핵심 기능 구현을 담당했으며, AI를 개발 보조 도구로 활용해 기능을 제작하고 검토했습니다.",
+          "Responsible for implementing core gameplay functionality, using AI-assisted tools for implementation and review.",
         ),
       ],
     },
     cardRole: text(
-      "AI 활용 프로그래밍 일부 참여",
-      "Limited AI-assisted programming contribution",
+      "핵심 게임 기능 구현 (AI 활용)",
+      "Core gameplay implementation (AI-assisted)",
     ),
-    focus: "Team Collaboration / AI-assisted Development Contribution",
+    focus: "Core Gameplay Implementation / AI-assisted Development",
   },
   {
     slug: "world-first-kill",

@@ -574,16 +574,33 @@ dd {
   font-size: 1rem;
   margin-top: 24px;
 }
+.contact {
+  scroll-margin-top: 24px;
+}
 .contact-links {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 28px;
   margin-top: 28px;
 }
-.contact-links > span {
-  font-size: 0.8rem;
-  color: var(--muted);
+.contact-links > h3 {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+}
+.contact-label { color: var(--muted); font-size: 0.8rem; }
+.contact-value { color: var(--text); font-size: 1rem; overflow-wrap: anywhere; }
+.contact-link:hover .contact-value { text-decoration: underline; text-underline-offset: 4px; }
+.pending-section p { color: var(--muted); font-size: 0.88rem; }
+@media (max-width: 600px) {
+  .contact-links { grid-template-columns: 1fr; }
 }
 .preferences {
   flex-wrap: wrap;
