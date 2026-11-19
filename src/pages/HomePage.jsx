@@ -1,4 +1,9 @@
-import { projects } from "../data/projects.js";
+import { localize, projects } from "../data/projects.js";
+import {
+  designAreas,
+  experienceHighlights,
+  contactLinks,
+} from "../data/designerContent.js";
 import { ProjectCard } from "../components/ProjectCard.jsx";
 
 export function HomePage({ language, content }) {
@@ -9,9 +14,18 @@ export function HomePage({ language, content }) {
   return (
     <>
       <section className="hero">
-        <p className="eyebrow">RIN / GAME CREATOR</p>
-        <h1>{content.intro}</h1>
+        <p className="eyebrow">RIN / GAME DESIGNER</p>
+        <h1>
+          {content.intro.map((line) => (
+            <span className="hero-line" key={line}>
+              {line}
+            </span>
+          ))}
+        </h1>
         <p className="lead">{content.introText}</p>
+        <p className="specialties">
+          Gameplay Design · System Design · Prototyping
+        </p>
         <a className="text-link" href="#/works">
           {content.allWorks} ↗
         </a>
@@ -23,7 +37,7 @@ export function HomePage({ language, content }) {
             <p>{content.selectedText}</p>
           </div>
           <a className="text-link" href="#/works">
-            {content.works} ↗
+            {content.viewAll} ↗
           </a>
         </div>
         <div className="selected-grid">
@@ -36,21 +50,66 @@ export function HomePage({ language, content }) {
             />
           ))}
         </div>
+        <a className="development-link text-link" href="#/works/just-blocked">
+          {content.inProgress} ↗
+        </a>
       </section>
       <section className="section">
         <h2>{content.what}</h2>
         <div className="disciplines">
-          {["Game Design", "System Design", "UI·UX"].map((title, index) => (
-            <div key={title}>
-              <h3>{title}</h3>
-              <p>{content.disciplines[index]}</p>
+          {designAreas.map((area) => (
+            <div key={area.title}>
+              <h3>{area.title}</h3>
+              <p>{localize(area.description, language)}</p>
+              <div className="example-links">
+                {area.projects.map((slug) => {
+                  const project = projects.find((item) => item.slug === slug);
+                  return (
+                    <a key={slug} href={`#/works/${slug}`}>
+                      {localize(project.name, language)} ↗
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           ))}
         </div>
       </section>
-      <section className="section contact">
-        <h2>{content.contact}</h2>
-        <p>{content.contactText}</p>
+      <section className="section">
+        <h2>Experience &amp; Highlights</h2>
+        <div className="highlights">
+          {experienceHighlights.map((highlight) => (
+            <div className="highlight-row" key={highlight.title}>
+              <h3>{highlight.title}</h3>
+              <ul>
+                {highlight.items.map((item) => (
+                  <li key={item.ko}>{localize(item, language)}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section id="contact" className="section contact">
+        <h2>Behind the Games</h2>
+        <p className="about-text">{content.about}</p>
+        <div className="contact-links" aria-label={content.contact}>
+          <h3>{content.contact}</h3>
+          {contactLinks.map((link) => (
+            <a
+              className="contact-link"
+              key={link.url}
+              href={link.url}
+              target={link.url.startsWith("https://") ? "_blank" : undefined}
+              rel={link.url.startsWith("https://") ? "noopener noreferrer" : undefined}
+            >
+              <span className="contact-label">{link.label}</span>
+              <span className="contact-value">
+                {link.value} <span aria-hidden="true">↗</span>
+              </span>
+            </a>
+          ))}
+        </div>
       </section>
     </>
   );

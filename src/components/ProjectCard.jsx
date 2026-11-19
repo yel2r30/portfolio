@@ -22,12 +22,19 @@ export function ProjectCard({ project, language, content, compact = false }) {
           <span aria-hidden="true">↗</span>
         </div>
         <p>{localize(project.summary, language)}</p>
+        <p className="role">
+          <span className="role-label">{content.role}</span>
+          {localize(project.cardRole, language) ||
+            project.roles.map((role) => localize(role, language)).join(" / ")}
+        </p>
         <p className="meta">
           {environment} · {localize(project.team, language)}
         </p>
-        <p className="role">
-          {project.roles.map((role) => localize(role, language)).join(" / ")}
-        </p>
+        {(project.achievements?.length > 0 || project.status) && (
+          <p className="card-outcome">
+            {localize(project.achievements?.[0] || project.status, language)}
+          </p>
+        )}
       </div>
     </a>
   );

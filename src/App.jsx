@@ -25,13 +25,19 @@ export function App() {
 
   useEffect(() => {
     const navigate = () => {
-      setRoute(location.hash.slice(1) || "/");
-      mainRef.current?.focus();
-      window.scrollTo(0, 0);
+      const nextRoute = location.hash.slice(1) || "/";
+      setRoute(nextRoute);
+      mainRef.current?.focus({ preventScroll: true });
+      if (nextRoute !== "/contact") window.scrollTo(0, 0);
     };
     window.addEventListener("hashchange", navigate);
     return () => window.removeEventListener("hashchange", navigate);
   }, []);
+  useEffect(() => {
+    if (route === "/contact") {
+      document.getElementById("contact")?.scrollIntoView({ block: "start" });
+    }
+  }, [route]);
   useEffect(() => {
     document.documentElement.lang = language;
     document.title = `${project ? localize(project.name, language) : route === "/works" ? "WORKS" : "RIN"} — RIN Portfolio`;
@@ -81,6 +87,9 @@ export function App() {
             >
               {content.works}
             </a>
+            <a href="#/contact" aria-current={route === "/contact" ? "page" : undefined}>
+              {content.contactNav}
+            </a>
           </nav>
           <div className="preferences">
             <LanguageSelector
@@ -105,7 +114,7 @@ export function App() {
         </div>
       </header>
       <main id="main" ref={mainRef} tabIndex={-1}>
-        {route === "/" ? (
+        {route === "/" || route === "/contact" ? (
           <HomePage language={language} content={content} />
         ) : route === "/works" ? (
           <WorksPage language={language} content={content} />

@@ -1,10 +1,10 @@
 export const localize = (value, language) =>
   value?.[language] || value?.ko || "";
+
+// Optional image/images use { src: 'assets/...', alt: { ko, en } }.
+// cardRole is a concise summary; roles retain the full contribution scope.
 const text = (ko, en) => ({ ko, en });
 
-// Optional media use { src: 'assets/...', alt: { ko, en } }.
-// Optional links use { label: { ko, en }, url: 'https://...' }.
-// A lower homeOrder puts a project earlier and makes the first card larger.
 export const projects = [
   {
     slug: "keystone",
@@ -13,15 +13,18 @@ export const projects = [
     featured: true,
     homeOrder: 1,
     summary: text(
-      "해달이 성게를 먹어 켈프숲을 구하는 엔드리스 아케이드 생존 게임",
-      "An endless arcade survival game about an otter saving a kelp forest by eating sea urchins.",
+      "성게를 먹고 산소를 관리하며 켈프숲을 구하는 아케이드 생존 게임",
+      "An arcade survival game about eating sea urchins, managing oxygen and saving a kelp forest.",
     ),
     environment: "Verse8",
     team: text("인턴십 · 1인 제작", "Internship · Solo"),
     status: text("원스토어 AI Games 배포", "Released on ONE store AI Games"),
     roles: [
-      text("인턴십 팀장", "Internship team lead"),
-      text("게임 1인 제작", "Solo game production"),
+      text(
+        "게임플레이 및 핵심 반복 구조 기획 · 개인 제작",
+        "Gameplay and core loop design · Solo production",
+      ),
+      text("Verse8 인턴십 팀장 경험", "Verse8 internship team lead experience"),
     ],
     color: "#cbded5",
     achievements: [
@@ -32,8 +35,8 @@ export const projects = [
     sections: {
       gameplay: [
         text(
-          "해달이 성게를 먹으며 생존하고 켈프숲을 구합니다.",
-          "Survive as an otter, eat sea urchins and save the kelp forest.",
+          "성게를 더 먹어 켈프숲을 구하는 행동과 수면으로 올라가 산소를 회복하는 행동 사이에서 선택합니다.",
+          "Choose between eating more sea urchins to save the kelp forest and returning to the surface to recover oxygen.",
         ),
       ],
       results: [
@@ -43,6 +46,11 @@ export const projects = [
         ),
       ],
     },
+    cardRole: text(
+      "게임플레이 기획 · 개인 제작",
+      "Gameplay design · Solo production",
+    ),
+    focus: "Gameplay Design / Core Loop / Solo Production",
   },
   {
     slug: "computer-escape",
@@ -51,8 +59,8 @@ export const projects = [
     featured: true,
     homeOrder: 2,
     summary: text(
-      "위로 올라가 탈출하는 플랫폼 액션",
-      "A platform action game about climbing upward to escape.",
+      "점프를 차지하며 낙하 위험을 넘어 위로 탈출하는 플랫폼 액션",
+      "A vertical platform action game built around charged jumps and the risk of falling.",
     ),
     environment: "Unity",
     team: text("3인 팀", "Team of 3"),
@@ -66,6 +74,16 @@ export const projects = [
       text("교내 공모전 우수상", "Excellence award in a campus competition"),
       text("이전 지스타 전시", "Previously exhibited at G-STAR"),
     ],
+    cardRole: text("팀장 · 기획 · 아트", "Team lead · Design · Art"),
+    focus: "Gameplay Design / Level Design / Team Leadership",
+    sections: {
+      gameplay: [
+        text(
+          "점프 차지와 낙하 위험을 고려하며 위로 올라가 탈출합니다.",
+          "Charge jumps and manage the risk of falling while climbing upward to escape.",
+        ),
+      ],
+    },
   },
   {
     slug: "orbit",
@@ -74,13 +92,23 @@ export const projects = [
     featured: true,
     homeOrder: 3,
     summary: text(
-      "공전하는 동료와 연계 콤보를 만드는 파티 기반 2D 서바이벌",
-      "Party-based 2D survival with orbiting companions, automatic attacks and combo synergies.",
+      "공전하는 동료와 연속 공격 콤보를 만드는 2D 탑다운 파티 서바이벌",
+      "A top-down party survival game with orbiting companions and consecutive-attack combos.",
     ),
     environment: "Verse8 + Codex",
     team: text("개인 제작", "Solo"),
-    status: text("추후 업데이트 가능", "Open to future updates"),
-    roles: [text("1인 제작", "Solo production")],
+    status: text(
+      "초기 제작 후 개선·확장 중",
+      "Iterating and expanding after initial development",
+    ),
+    roles: [
+      text("게임 기획 · 시스템 설계", "Game planning · System design"),
+      text(
+        "프로토타이핑 방향 수립 · 테스트와 개선 판단",
+        "Prototyping direction · Testing and iteration decisions",
+      ),
+      text("AI 개발 협업 관리", "AI development collaboration management"),
+    ],
     color: "#d2dcea",
     history: [
       text("초기 3일 집중 제작", "Initial three-day development sprint"),
@@ -88,11 +116,16 @@ export const projects = [
     sections: {
       gameplay: [
         text(
-          "동료 공전, 자동 공격, 연계 콤보를 중심으로 플레이합니다.",
-          "Play revolves around orbiting companions, automatic attacks and combo synergies.",
+          "플레이어를 중심으로 동료가 공전하며 자동 공격합니다. 서로 다른 동료의 연속 공격으로 콤보를 만들고 점프와 착지 공격을 활용합니다. 던전·상점·성장·파티 시스템은 확장 중입니다.",
+          "Companions orbit the player and attack automatically. Consecutive attacks from different companions create combos, alongside jumping and landing attacks. Dungeon, shop, progression and party systems are being expanded.",
         ),
       ],
     },
+    cardRole: text(
+      "시스템 기획 · AI 개발 협업",
+      "System design · AI development collaboration",
+    ),
+    focus: "System Design / Gameplay Loop / Iteration",
   },
   {
     slug: "just-blocked",
@@ -100,13 +133,18 @@ export const projects = [
     category: "case",
     featured: true,
     summary: text(
-      "공격 버튼 없이 방패와 패링으로 싸우는 액션",
-      "An action game built around shields and parrying, with no attack button.",
+      "공격 버튼 없이 방패 방어와 타이밍 패링으로 싸우는 2D 액션",
+      "A 2D action game about shield defense and timed parries, with no attack button.",
     ),
     environment: "Unity",
     team: text("개인 제작", "Solo"),
     status: text("개발 중", "In development"),
-    roles: [text("1인 제작", "Solo production")],
+    roles: [
+      text(
+        "전투 규칙 기획 · 개인 프로토타이핑 및 개발",
+        "Combat rule design · Solo prototyping and development",
+      ),
+    ],
     color: "#e3d8cd",
     history: [
       text(
@@ -127,7 +165,18 @@ export const projects = [
           "Planned to grow into a key portfolio project.",
         ),
       ],
+      gameplay: [
+        text(
+          "이동과 바라보는 방향을 독립적으로 제어하며, 방패 방어와 정확한 타이밍의 패링으로 싸웁니다.",
+          "Control movement and facing independently, using shield defense and precisely timed parries.",
+        ),
+      ],
     },
+    cardRole: text(
+      "전투 규칙 기획 · 개인 프로토타이핑",
+      "Combat rules · Solo prototyping",
+    ),
+    focus: "Combat Design / Game Rules / Prototyping",
   },
   {
     slug: "trunk",
@@ -135,22 +184,35 @@ export const projects = [
     category: "case",
     featured: true,
     summary: text(
-      "차량을 이동식 거점으로 사용하는 사막 협동 생존",
-      "Cooperative desert survival with a vehicle serving as a mobile base.",
+      "차량을 이동식 거점으로 삼아 운전·채집·제작을 이어가는 사막 협동 생존",
+      "Cooperative desert survival built around driving, gathering and crafting with a mobile vehicle base.",
     ),
-    environment: "Unreal Engine",
+    environment: "Unreal Engine 5",
     team: text("팀 프로젝트", "Team project"),
     status: text("개발 중", "In development"),
-    roles: [text("UI", "UI")],
+    roles: [
+      text(
+        "인벤토리 · 저장고 · 제작 메모장 · 정보 팝업 UI 제작·조정 참여",
+        "Contributed to inventory, storage, crafting notebook and information popup UI production and refinement",
+      ),
+    ],
     color: "#e3ddc5",
+    cardRole: text("게임 UI 제작·조정", "Game UI production and refinement"),
+    focus: "Game UI / UX / Information Architecture",
   },
   {
     slug: "frog-sokoban",
     name: text("개구리 소코반", "개구리 소코반"),
     category: "more",
-    summary: text("HTML 기반 웹 퍼즐 게임", "An HTML-based web puzzle game."),
+    summary: text(
+      "압력판·컨베이어·게이트·특수 바닥을 활용하는 소코반 이동 퍼즐",
+      "A Sokoban movement puzzle with pressure plates, conveyors, gates and special floor tiles.",
+    ),
     environment: "HTML",
-    team: text("개별 게임 1인 제작", "Solo game within a course project"),
+    team: text(
+      "4인 그룹 · 본인 게임 개별 제작",
+      "Group of 4 · Individually produced game",
+    ),
     status: text(
       "개발 중 · itch.io 배포 예정",
       "In development · Planned for itch.io",
@@ -162,6 +224,11 @@ export const projects = [
       text("자기설계교과 3회차", "Self-designed course, third iteration"),
     ],
     color: "#d7dfca",
+    cardRole: text(
+      "그룹 팀장 · 퍼즐 기획·개별 제작",
+      "Group lead · Puzzle design · Solo production",
+    ),
+    focus: "Puzzle Design / Rule Design / Level Design",
   },
   {
     slug: "mystery-number",
@@ -170,11 +237,25 @@ export const projects = [
     summary: text("모바일 숫자 추리 퍼즐", "A mobile number deduction puzzle."),
     environment: "Verse8",
     team: text("인턴십 · 1인 제작", "Internship · Solo"),
-    status: text("기본 기능 프로토타입", "Basic-feature prototype"),
+    status: text(
+      "기본 기능 프로토타입 · 작업 보류",
+      "Basic-feature prototype · On hold",
+    ),
     roles: [
       text("인턴십 팀장 · 1인 제작", "Internship team lead · Solo production"),
     ],
     color: "#ddd9cd",
+    cardRole: text(
+      "퍼즐 기획 · 개인 프로토타이핑",
+      "Puzzle design · Solo prototyping",
+    ),
+    focus: "Puzzle Design / Prototyping",
+    history: [
+      text(
+        "Verse8 인턴십 중 개인 제작. 에셋 및 완성도 작업 미완료, KeyStone 우선 개발로 보류",
+        "Produced individually during the Verse8 internship. Assets and polish remain unfinished; paused to prioritize KeyStone.",
+      ),
+    ],
   },
   {
     slug: "rcc-factory",
@@ -189,6 +270,8 @@ export const projects = [
       text("자기설계교과 1회차", "Self-designed course, first iteration"),
     ],
     color: "#cfdcda",
+    cardRole: text("팀장 · 게임 기획", "Team lead · Game planning"),
+    focus: "Game Planning / Team Leadership",
   },
   {
     slug: "long-tailed-tit",
@@ -208,6 +291,8 @@ export const projects = [
       text("자기설계교과 2회차", "Self-designed course, second iteration"),
     ],
     color: "#e4d6d3",
+    cardRole: text("팀장 · 규칙 기획", "Team lead · Rule design"),
+    focus: "Rule Design / Board Game Design / Team Leadership",
   },
   {
     slug: "legend-sword",
@@ -217,21 +302,32 @@ export const projects = [
     environment: "Unity",
     team: text("팀 프로젝트", "Team project"),
     roles: [
-      text("AI 활용 프로그래밍 참여", "Contributed to AI-assisted programming"),
+      text(
+        "핵심 게임 기능 구현 (AI 활용)",
+        "Core gameplay implementation (AI-assisted)",
+      ),
     ],
     color: "#d9d5df",
     achievements: [
-      text("교내 공모전 최우수상", "Top award in a campus competition"),
+      text(
+        "팀 프로젝트 교내 공모전 최우수상",
+        "Team project top award in a campus competition",
+      ),
       text("2026 지스타 출품 예정", "Planned for G-STAR 2026"),
     ],
     sections: {
       contribution: [
         text(
-          "AI 활용 프로그래밍에 참여했습니다. 본인 기여 비중은 상대적으로 적습니다.",
-          "Contributed to AI-assisted programming. My contribution was relatively limited.",
+          "게임의 핵심 기능 구현을 담당했으며, AI를 개발 보조 도구로 활용해 기능을 제작하고 검토했습니다.",
+          "Responsible for implementing core gameplay functionality, using AI-assisted tools for implementation and review.",
         ),
       ],
     },
+    cardRole: text(
+      "핵심 게임 기능 구현 (AI 활용)",
+      "Core gameplay implementation (AI-assisted)",
+    ),
+    focus: "Core Gameplay Implementation / AI-assisted Development",
   },
   {
     slug: "world-first-kill",
@@ -256,6 +352,8 @@ export const projects = [
         ),
       ],
     },
+    cardRole: text("몬스터 도트 애니메이션", "Monster pixel animation"),
+    focus: "Pixel Animation",
   },
 ];
 
