@@ -338,7 +338,7 @@ export const projects = [
   },
   {
     slug: "long-tailed-tit",
-    name: text("오목눈이의 역습", "Revenge of the Long-tailed Tit"),
+    name: text("오목눈이의 역습", "오목눈이의 역습"),
     category: "more",
     summary: text(
       "숨겨진 카드를 뒤집는 위험 선택과 주사위 판정으로 마지막 생존자를 가리는 파티형 카드게임",
