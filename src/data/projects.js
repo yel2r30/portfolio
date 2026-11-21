@@ -92,40 +92,88 @@ export const projects = [
     featured: true,
     homeOrder: 3,
     summary: text(
-      "공전하는 동료와 연속 공격 콤보를 만드는 2D 탑다운 파티 서바이벌",
-      "A top-down party survival game with orbiting companions and consecutive-attack combos.",
+      "공전하는 동료와 연계 콤보로 살아남는 2D 파티 액션 서바이버",
+      "A 2D action survivor built around orbiting companions and coordinated attack combos.",
     ),
-    environment: "Verse8 + Codex",
-    team: text("개인 제작", "Solo"),
-    status: text(
-      "초기 제작 후 개선·확장 중",
-      "Iterating and expanding after initial development",
-    ),
+    environment: "Verse8 · Phaser / React",
+    team: text("개인 프로젝트 · AI 활용 개발", "Solo project · AI-assisted development"),
+    status: text("개발 중 · 플레이테스트 및 개선", "In development · Playtesting and refinement"),
     roles: [
-      text("게임 기획 · 시스템 설계", "Game planning · System design"),
-      text(
-        "프로토타이핑 방향 수립 · 테스트와 개선 판단",
-        "Prototyping direction · Testing and iteration decisions",
-      ),
-      text("AI 개발 협업 관리", "AI development collaboration management"),
+      text("게임플레이 · 전투 및 성장 시스템 기획", "Gameplay, combat and progression system design"),
+      text("캐릭터 · UI/UX 방향 설계", "Character and UI/UX direction"),
+      text("AI 구현 협업 관리 · 플레이테스트 및 개선", "AI-assisted implementation coordination, playtesting and iteration"),
     ],
     color: "#d2dcea",
+    image: {
+      src: "assets/orbit/ORBIT_combat_portfolio.webp",
+      alt: text(
+        "공전하는 파티원들이 자동 공격하고 연계 콤보를 쌓는 ORBIT 일반 전투 화면",
+        "ORBIT combat with orbiting companions, automatic attacks and combo counter",
+      ),
+    },
+    images: [
+      {
+        src: "assets/orbit/ORBIT_title_portfolio.webp",
+        alt: text("ORBIT 타이틀과 시작 동료 선택 화면", "ORBIT title and starting companion selection"),
+        caption: text("타이틀 · 시작 동료 선택", "Title · Starting companion"),
+      },
+      {
+        src: "assets/orbit/ORBIT_shop_portfolio.webp",
+        alt: text("ORB로 동료를 영입하고 파티를 강화하는 PARTY SHOP", "PARTY SHOP for recruiting and upgrading companions using ORB"),
+        caption: text("PARTY SHOP · 동료 영입과 강화", "PARTY SHOP · Recruitment and upgrades"),
+      },
+      {
+        src: "assets/orbit/ORBIT_boss_portfolio.webp",
+        alt: text("보스 적월의 관측핵의 레이저 패턴에 대응하는 ORBIT 전투 화면", "ORBIT boss battle against Red Moon Observatory Core with a laser attack pattern"),
+        caption: text("보스전 · 공격 예고와 회피", "Boss battle · Telegraphs and dodging"),
+      },
+    ],
     history: [
-      text("초기 3일 집중 제작", "Initial three-day development sprint"),
+      text("초기 3일 집중 프로토타입 제작 후 지속 개선", "Initial three-day prototype sprint followed by ongoing iteration"),
     ],
     sections: {
       gameplay: [
         text(
-          "플레이어를 중심으로 동료가 공전하며 자동 공격합니다. 서로 다른 동료의 연속 공격으로 콤보를 만들고 점프와 착지 공격을 활용합니다. 던전·상점·성장·파티 시스템은 확장 중입니다.",
-          "Companions orbit the player and attack automatically. Consecutive attacks from different companions create combos, alongside jumping and landing attacks. Dungeon, shop, progression and party systems are being expanded.",
+          "동료들이 플레이어를 중심으로 공전하며 각자의 방식으로 자동 공격합니다. 서로 다른 동료의 연속 적중으로 콤보가 쌓이고, 플레이어는 이동과 점프 착지 충격파로 전투에 개입합니다.",
+          "Companions orbit and attack automatically with distinct patterns. Hits from different companions build combos, while the player contributes through movement and jump-landing shockwaves.",
+        ),
+        text(
+          "EXP는 레벨업 강화에, ORB는 상점에서 동료 영입·중복 강화에 사용합니다. 파티 정원은 성장 선택으로 최대 5명까지 확장할 수 있습니다.",
+          "EXP fuels level-up upgrades; ORB recruits or upgrades companions at shops. Party capacity can grow to five through level-up choices.",
+        ),
+        text(
+          "필드의 균열로 일반·고난도 던전과 보스전에 진입하고, 클리어 후 보상 3종 중 하나를 선택합니다.",
+          "Rifts lead to regular, harder and boss encounters, followed by a choice of one of three rewards.",
+        ),
+      ],
+      contribution: [
+        text(
+          "전투 규칙, 연계 콤보, 파티 성장, 던전·상점 흐름과 HUD의 정보 구조를 기획했습니다. 캐릭터 계열·색상·일러스트 활용 방향을 정하고, AI 개발 도구로 구현된 결과를 플레이하며 수정 사항을 결정했습니다.",
+          "Designed combat rules, combo mechanics, party progression, dungeon/shop flows and HUD hierarchy. Set character, color and illustration direction, then reviewed AI-assisted implementation through hands-on playtesting.",
+        ),
+      ],
+      process: [
+        text(
+          "초기 3일간 핵심 전투 프로토타입을 만든 뒤, 동료 10종과 파티 영입·성장, 던전, 보스전으로 확장했습니다.",
+          "Built the core combat prototype in an initial three-day sprint, then expanded toward ten companions, party progression, dungeons and boss encounters.",
+        ),
+        text(
+          "실제 플레이에서 피격감과 안내의 가독성을 점검했고, 파티 만석이어도 중복 영입으로 강화할 수 있도록 구매 규칙과 UI를 함께 조정했습니다.",
+          "Used playtests to refine hit feedback and on-screen guidance, and aligned shop logic with UI so duplicate recruits can upgrade an existing companion even when the party is full.",
+        ),
+      ],
+      results: [
+        text(
+          "공전 자동 공격과 파티 빌딩을 연결하는 플레이 루프를 구성했습니다. 다만 장시간 밸런스와 튜토리얼 전달력은 계속 검증·개선 중입니다.",
+          "Established a gameplay loop combining orbiting auto-combat and party building. Long-session balance and tutorial clarity remain under evaluation.",
         ),
       ],
     },
     cardRole: text(
-      "시스템 기획 · AI 개발 협업",
-      "System design · AI development collaboration",
+      "전투·성장 시스템 기획 · AI 협업 개발",
+      "Combat & progression design · AI-assisted development",
     ),
-    focus: "System Design / Gameplay Loop / Iteration",
+    focus: "Gameplay / Systems / Playtesting / UI UX",
   },
   {
     slug: "just-blocked",

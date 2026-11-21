@@ -25,7 +25,7 @@ export function ProjectPage({ project, language, content }) {
     /^https?:\/\//.test(link.url),
   );
   return (
-    <article className="project-detail">
+    <article className={`project-detail ${project.slug === "orbit" ? "project-detail--orbit" : ""}`}>
       <a href="#/works" className="text-link">
         ← {content.back}
       </a>
@@ -86,15 +86,23 @@ export function ProjectPage({ project, language, content }) {
             {sections.gameplay?.map((item, index) => (
               <p key={index}>{localize(item, language)}</p>
             ))}
-            {project.images?.map((media) => (
-              <ProjectMedia
-                key={media.src}
-                media={media}
-                project={project}
-                language={language}
-                placeholder={content.placeholder}
-              />
-            ))}
+            {project.images?.length > 0 && (
+              <div className="project-gallery">
+                {project.images.map((media) => (
+                  <figure className="project-gallery-item" key={media.src}>
+                    <ProjectMedia
+                      media={media}
+                      project={project}
+                      language={language}
+                      placeholder={content.placeholder}
+                    />
+                    {media.caption && (
+                      <figcaption>{localize(media.caption, language)}</figcaption>
+                    )}
+                  </figure>
+                ))}
+              </div>
+            )}
           </div>
         </section>
       )}
