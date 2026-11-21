@@ -270,10 +270,6 @@ export const projects = [
         label: text("기존 플레이 영상 · YouTube (UI 개편 이전)", "Earlier gameplay video · YouTube (pre-redesign)"),
         url: "https://www.youtube.com/watch?v=5l-P5u_edeE",
       },
-      {
-        label: text("2026 경기게임오디션 영상 · Google Drive (UI 개편 이전)", "2026 Game Audition video · Google Drive (pre-redesign)"),
-        url: "https://drive.google.com/file/d/1w0PtOKTmc5UziwxQ8_8zzJK-_wdF93o8/view?usp=sharing",
-      },
     ],
     image: {
       src: "assets/trunk/TRUNK_title.png",
@@ -313,8 +309,8 @@ export const projects = [
       ],
       results: [
         text(
-          "현재 UI 제작·개선이 진행 중입니다. 첨부한 게임 화면과 외부 영상은 UI 개편 전 자료로, 제가 제작 중인 새 UI를 보여주지는 않습니다. 개편 UI 자료는 추후 추가할 예정입니다.",
-          "UI production and refinement are ongoing. The images and linked videos show the project before the UI redesign, not the UI I am currently creating. Updated UI materials will be added later.",
+          "현재 UI 제작·개선이 진행 중입니다. 첨부한 게임 화면과 YouTube 영상은 UI 개편 전 자료로, 제가 제작 중인 새 UI를 보여주지는 않습니다. 개편 UI 자료는 추후 추가할 예정입니다.",
+          "UI production and refinement are ongoing. The images and linked YouTube video show the project before the UI redesign, not the UI I am currently creating. Updated UI materials will be added later.",
         ),
       ],
     },
