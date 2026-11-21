@@ -12,6 +12,52 @@ function TextList({ items, language }) {
   );
 }
 
+function ProjectVideo({ video, language }) {
+  const validVideo =
+    (video?.youtubeId && /^[a-zA-Z0-9_-]{11}$/.test(video.youtubeId)) ||
+    (video?.driveId && /^[a-zA-Z0-9_-]{20,}$/.test(video.driveId));
+  if (!validVideo) return null;
+  return (
+        <section className="project-video-section" aria-label={localize(video.title, language)}>
+          <h2>{localize(video.title, language)}</h2>
+          <div className="project-video-frame">
+            {video.driveId ? (
+              <iframe
+                src={`https://drive.google.com/file/d/${video.driveId}/preview`}
+                title={localize(video.title, language)}
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allow="autoplay; fullscreen"
+                allowFullScreen
+              />
+            ) : (
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}?rel=0`}
+                title={localize(video.title, language)}
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            )}
+          </div>
+          {video.caption && (
+            <p className="project-video-caption">{localize(video.caption, language)}</p>
+          )}
+          {video.driveId && video.fallback && (
+            <a
+              className="project-video-fallback text-link"
+              href={`https://drive.google.com/file/d/${video.driveId}/view`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {localize(video.fallback, language)} ↗
+            </a>
+          )}
+        </section>
+  );
+}
+
 export function ProjectPage({ project, language, content }) {
   const [evolutionStage, setEvolutionStage] = useState(5);
   const environment =
@@ -122,45 +168,8 @@ export function ProjectPage({ project, language, content }) {
           placeholder={content.placeholder}
         />
       )}
-      {((project.video?.youtubeId && /^[a-zA-Z0-9_-]{11}$/.test(project.video.youtubeId)) ||
-        (project.video?.driveId && /^[a-zA-Z0-9_-]{20,}$/.test(project.video.driveId))) && (
-        <section className="project-video-section" aria-label={localize(project.video.title, language)}>
-          <h2>{localize(project.video.title, language)}</h2>
-          <div className="project-video-frame">
-            {project.video.driveId ? (
-              <iframe
-                src={`https://drive.google.com/file/d/${project.video.driveId}/preview`}
-                title={localize(project.video.title, language)}
-                loading="lazy"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allow="autoplay; fullscreen"
-                allowFullScreen
-              />
-            ) : (
-              <iframe
-                src={`https://www.youtube-nocookie.com/embed/${project.video.youtubeId}?rel=0`}
-                title={localize(project.video.title, language)}
-                loading="lazy"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            )}
-          </div>
-          {project.video.caption && (
-            <p className="project-video-caption">{localize(project.video.caption, language)}</p>
-          )}
-          {project.video.driveId && project.video.fallback && (
-            <a
-              className="project-video-fallback text-link"
-              href={`https://drive.google.com/file/d/${project.video.driveId}/view`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {localize(project.video.fallback, language)} ↗
-            </a>
-          )}
-        </section>
+      {!project.video?.belowGallery && (
+        <ProjectVideo video={project.video} language={language} />
       )}
       <section className="detail-section">
         <h2>{content.overview}</h2>
@@ -227,6 +236,9 @@ export function ProjectPage({ project, language, content }) {
             )}
           </div>
         </section>
+      )}
+      {project.video?.belowGallery && (
+        <ProjectVideo video={project.video} language={language} />
       )}
       {project.cardShowcase?.length > 0 && (
         <section className="detail-section">
