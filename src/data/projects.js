@@ -124,6 +124,14 @@ export const projects = [
         caption: text("PARTY SHOP · 동료 영입과 강화", "PARTY SHOP · Recruitment and upgrades"),
       },
       {
+        src: "assets/orbit/ORBIT_archive_portfolio.webp",
+        alt: text(
+          "ORBIT 파티원 도감 화면, 캐릭터 일러스트와 종족별 분류 및 해금 상태",
+          "ORBIT companion archive showing character portraits, categories and unlock states",
+        ),
+        caption: text("동료 도감 · 캐릭터와 세계관", "Companion Archive · Characters and lore"),
+      },
+      {
         src: "assets/orbit/ORBIT_boss_portfolio.webp",
         alt: text("보스 적월의 관측핵의 레이저 패턴에 대응하는 ORBIT 전투 화면", "ORBIT boss battle against Red Moon Observatory Core with a laser attack pattern"),
         caption: text("보스전 · 공격 예고와 회피", "Boss battle · Telegraphs and dodging"),
