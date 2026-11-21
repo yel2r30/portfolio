@@ -697,6 +697,33 @@ export const projects = [
     team: text("그래픽 작업 참여", "Art contribution"),
     roles: [text("몬스터 도트 애니메이션", "Monster pixel animation")],
     color: "#d5d9dc",
+    spritePreview: [
+      {
+        label: text("늑대", "Wolf"),
+        src: "assets/world-first-kill/motion/wolf-motion.webp",
+        stillSrc: "assets/world-first-kill/motion/wolf-still.webp",
+      },
+      {
+        label: text("슬라임", "Slime"),
+        src: "assets/world-first-kill/motion/slime-motion.webp",
+        stillSrc: "assets/world-first-kill/motion/slime-still.webp",
+      },
+      {
+        label: text("고블린", "Goblin"),
+        src: "assets/world-first-kill/motion/goblin-motion.webp",
+        stillSrc: "assets/world-first-kill/motion/goblin-still.webp",
+      },
+      {
+        label: text("스켈레톤", "Skeleton"),
+        src: "assets/world-first-kill/motion/skeleton-motion.webp",
+        stillSrc: "assets/world-first-kill/motion/skeleton-still.webp",
+      },
+      {
+        label: text("골렘", "Golem"),
+        src: "assets/world-first-kill/motion/golem-motion.webp",
+        stillSrc: "assets/world-first-kill/motion/golem-still.webp",
+      },
+    ],
     image: {
       src: "assets/world-first-kill/wfkc-monster-animation-cover.svg",
       alt: text("늑대·고블린·슬라임·골렘 몬스터 도트 스프라이트 대표 이미지", "Pixel sprite preview of wolf, goblin, slime and golem monsters"),

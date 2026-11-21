@@ -873,3 +873,68 @@ dd {
   object-fit: contain;
   background: #fcf6e9;
 }
+
+/* WFKC only: tiny animated WebP previews instead of loading a large GIF/JS player. */
+.sprite-preview {
+  margin: 0 0 52px;
+}
+.sprite-preview-header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin: 0 0 14px;
+}
+.sprite-preview-header h2 {
+  margin: 0;
+  font-size: 1.16rem;
+  line-height: 1.4;
+}
+.sprite-preview-header p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .84rem;
+}
+.sprite-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+.sprite-preview-item {
+  margin: 0;
+  min-width: 0;
+  border-radius: 10px;
+  padding: 10px 6px 12px;
+  background: #151b26;
+  border: 1px solid #344355;
+  text-align: center;
+}
+.sprite-preview-item picture,
+.sprite-preview-item img {
+  display: block;
+}
+.sprite-preview-item picture {
+  margin: 0 auto;
+  width: min(100%, 128px);
+}
+.sprite-preview-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+.sprite-preview-item figcaption {
+  padding-top: 5px;
+  font-size: .84rem;
+  font-weight: 600;
+  color: #f5f7fc;
+}
+@media (max-width: 830px) {
+  .sprite-preview-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .sprite-preview { margin-bottom: 38px; }
+  .sprite-preview-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .sprite-preview-item { padding: 8px 5px 10px; }
+}
