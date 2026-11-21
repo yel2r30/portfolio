@@ -352,6 +352,12 @@ export const projects = [
       text("카드 UI 디자인·레이아웃 수정", "Card UI design and layout refinement"),
     ],
     color: "#e4d6d3",
+    links: [
+      {
+        label: text("카드 UI 디자인 보기", "View Card UI Designs"),
+        url: "https://www.canva.com/d/3HfnqYLLPs_YOsE",
+      },
+    ],
     image: {
       src: "assets/long-tailed-tit/long-tailed-tit-title.webp",
       alt: text("오목눈이의 역습 카드게임 타이틀 로고", "Revenge of the Long-tailed Tit card game title art"),
@@ -389,8 +395,8 @@ export const projects = [
       ],
       contribution: [
         text(
-          "3인 팀의 팀장으로 게임 기획과 생존·카드 상호작용 규칙을 설계하고, 카드 UI의 구성과 레이아웃을 수정했습니다. 일러스트 생성은 담당하지 않았습니다.",
-          "Led a three-person team, designed gameplay and survival/card interaction rules, and refined card UI layouts. Illustration generation was not part of my role.",
+          "3인 팀의 팀장으로 게임 기획과 생존·카드 상호작용 규칙을 설계했습니다. 카드 UI에서는 카드명, 피해량, 발동 조건 및 효과 설명의 정보 배치와 레이아웃을 수정했습니다. 일러스트 생성은 담당하지 않았습니다.",
+          "Led a three-person team and designed gameplay and survival/card interaction rules. Refined card UI layout and the presentation of names, damage values, activation conditions and effect text. Illustration generation was not part of my role.",
         ),
       ],
       process: [
