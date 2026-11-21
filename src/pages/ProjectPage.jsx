@@ -48,12 +48,43 @@ export function ProjectPage({ project, language, content }) {
           </div>
         </div>
       </header>
-      <ProjectMedia
-        key={project.slug}
-        project={project}
-        language={language}
-        placeholder={content.placeholder}
-      />
+      {project.spritePreview?.length > 0 ? (
+        <section className="sprite-preview" aria-label={language === "en" ? "Monster animation previews" : "몬스터 애니메이션 미리보기"}>
+          <div className="sprite-preview-header">
+            <h2>{language === "en" ? "Monster Animation" : "몬스터 애니메이션"}</h2>
+            <p>{language === "en" ? "Frame-by-frame pixel animation previews" : "프레임 기반 도트 애니메이션 미리보기"}</p>
+          </div>
+          <div className="sprite-preview-grid">
+            {project.spritePreview.map((sprite) => (
+              <figure className="sprite-preview-item" key={sprite.src}>
+                <picture>
+                  <source
+                    media="(prefers-reduced-motion: reduce)"
+                    srcSet={`${import.meta.env.BASE_URL}${sprite.stillSrc}`}
+                    type="image/webp"
+                  />
+                  <img
+                    src={`${import.meta.env.BASE_URL}${sprite.src}`}
+                    width="128"
+                    height="128"
+                    alt={language === "en" ? `${localize(sprite.label, language)} animation` : `${localize(sprite.label, language)} 애니메이션`}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+                <figcaption>{localize(sprite.label, language)}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      ) : (
+        <ProjectMedia
+          key={project.slug}
+          project={project}
+          language={language}
+          placeholder={content.placeholder}
+        />
+      )}
       {((project.video?.youtubeId && /^[a-zA-Z0-9_-]{11}$/.test(project.video.youtubeId)) ||
         (project.video?.driveId && /^[a-zA-Z0-9_-]{20,}$/.test(project.video.driveId))) && (
         <section className="project-video-section" aria-label={localize(project.video.title, language)}>
