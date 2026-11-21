@@ -42,7 +42,7 @@ export const projects = [
         text("위험–보상 구조, 성게·복어 상호작용, 점수·콤보·산소 HUD를 설계하고 AI 개발 도구를 활용해 구현·플레이 테스트·개선 과정을 진행했습니다.", "Designed the risk–reward loop, sea-life interactions, and score/combo/oxygen HUD; coordinated AI-assisted implementation, playtesting and iteration."),
       ],
       process: [
-        text("수심별 산소 소모와 성게 보상을 연결하고, 복어가 무한히 누적되어 퇴로를 막지 않도록 출현·퇴장 규칙을 조정했습니다. 플레이 중 학습하는 순차 튜토리얼도 기획했습니다.", "Linked oxygen drain and rewards to depth, tuned pufferfish circulation to avoid unfair routes being blocked, and designed an in-game step-by-step tutorial."),
+        text("수심별 산소 소모와 고득점 성게를 연결하고, 성게 개체 수에 따라 켈프 숲의 상태가 달라지게 설계했습니다. 복어 퇴장 규칙으로 퇴로를 확보하고, 행동으로 배우는 순차 튜토리얼을 기획했습니다.", "Connected oxygen use with higher-value urchins by depth and tied kelp condition to urchin population. Designed pufferfish exit rules to avoid blocked routes and a learn-by-doing tutorial."),
       ],
       results: [
         text("2026 TU 게임챌린지 장려상 및 원스토어 AI Games 배포를 달성했고, 전시용 Windows 빌드의 로컬 순위표와 운영 흐름을 검증했습니다.", "Received a 2026 TU Game Challenge Encouragement Award, released on ONE store AI Games, and tested a Windows exhibition build with a local leaderboard."),
@@ -102,6 +102,10 @@ export const projects = [
         text(
           "점프를 최대 1초까지 차지해 높이를 조절하고, 낙하 위험을 감수하며 컴퓨터 안의 세계를 위로 올라가는 액션 플랫폼 게임입니다.",
           "Charge jumps for up to one second to control height and climb through a computer world while managing the risk of falling.",
+        ),
+        text(
+          "A/D 이동과 차지 점프에 마우스 커서 형태의 공격과 구역을 잇는 포털을 결합했습니다. 컴퓨터 내부의 서로 다른 스테이지를 탐험합니다.",
+          "Combines A/D movement and charged jumps with mouse-cursor attacks and portals connecting areas inside a computer-themed world.",
         ),
       ],
       process: [
@@ -398,8 +402,8 @@ export const projects = [
           "Defeat incoming ghosts through aimed shooting while protecting three gates (A, B and C) and the sanctuary behind them.",
         ),
         text(
-          "처치 보상으로 얻은 골드를 성문 수리와 공격력 강화 사이에 배분하고, 15초 정비 시간 뒤 다음 웨이브에 대응합니다. 5웨이브마다 보스가 등장합니다.",
-          "Spend gold from defeated enemies on gate repairs or attack upgrades. Prepare for 15 seconds between waves; a boss arrives every fifth wave.",
+          "처치·탐색으로 얻은 골드를 성문 수리와 공격력 강화에 나눠 쓰고, 15초 정비 후 다음 웨이브에 대응합니다. 성지 바깥의 코인을 노리면 낙사 위험이 있으며, 5웨이브마다 보스가 등장합니다.",
+          "Spend gold from enemies and pickups on gate repairs or attack upgrades. Leaving the sanctuary for coins risks falling; prepare for 15 seconds between waves and face a boss every fifth wave.",
         ),
       ],
       contribution: [
@@ -410,8 +414,8 @@ export const projects = [
       ],
       process: [
         text(
-          "방어할 성문과 플레이어 공격력을 같은 재화로 관리하게 하여, 생존을 위한 수리와 전투 효율을 위한 강화 사이에 선택을 만들었습니다.",
-          "Connected defensive repairs and offensive upgrades through one shared currency to create meaningful resource allocation decisions.",
+          "성문 수리와 공격력 강화에 같은 골드를 사용하게 해 선택을 만들었습니다. 3일간 AI로 구현을 보조하고 Unity에서 직접 플레이·수정하며 핵심 루프를 검증했습니다.",
+          "Used one currency for gate repairs and offensive upgrades. During the three-day sprint, AI supported implementation while I tested and refined the core loop in Unity.",
         ),
       ],
       results: [
@@ -429,8 +433,8 @@ export const projects = [
     name: text("미믹 취급 주의", "Mimic: Handle with Care"),
     category: "more",
     summary: text(
-      "재밌넥 4기에서 4인 팀으로 참여한 게임 프로젝트",
-      "A four-person game project created during Jaemitnet cohort 4.",
+      "NPC의 상황을 관찰해 변신하고, 유인·포식하며 단서를 모으는 잠입 퍼즐",
+      "A stealth puzzle about reading NPC contexts, disguising, luring targets and piecing together clues.",
     ),
     environment: text("게임 프로젝트 · 기획/UI", "Game project · Design/UI"),
     status: text("재밌넥 4기 수료 작품", "Jaemitnet cohort 4 completion project"),
@@ -444,10 +448,22 @@ export const projects = [
       alt: text("미믹 취급 주의 게임 타이틀 이미지", "Mimic: Handle with Care title artwork"),
     },
     sections: {
+      gameplay: [
+        text(
+          "NPC의 직업·욕구·장소·목격자 상황을 관찰하고, 상황에 맞는 모습으로 변신해 상대를 유인하는 잠입 퍼즐입니다. 모은 단서로 이야기의 맥락을 파악하도록 기획했습니다.",
+          "A stealth puzzle about observing NPC jobs, desires, locations and witnesses, then disguising to lure targets. Collected clues gradually reveal the story's context.",
+        ),
+      ],
       contribution: [
         text(
-          "재밌넥 4기 4인 팀 프로젝트에서 게임 기획과 UI 작업을 담당했습니다.",
-          "Contributed game planning and UI work in a four-person Jaemitnet cohort 4 project.",
+          "재밌넥 4기 4인 팀에서 게임 기획과 UI를 담당했습니다. 변신 선택 UI가 플레이 화면을 가리지 않도록 슬롯의 노출 방식과 조작 흐름을 검토했습니다.",
+          "Contributed game design and UI in a four-person Jaemitnet cohort 4 team. Reviewed how to choose disguises without the slot UI blocking gameplay.",
+        ),
+      ],
+      process: [
+        text(
+          "팀원별 아이디어의 핵심 재미와 구현 범위를 비교해 방향을 정리했습니다. 변신 핫바의 휠·클릭 조작과 숨김·노출 방식도 사용성 관점에서 검토했습니다.",
+          "Compared competing ideas and scope to align the team's core concept. Evaluated wheel/click controls and show/hide behavior for the disguise hotbar.",
         ),
       ],
     },
