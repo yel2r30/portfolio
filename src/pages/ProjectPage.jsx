@@ -54,6 +54,22 @@ export function ProjectPage({ project, language, content }) {
         language={language}
         placeholder={content.placeholder}
       />
+      {project.video?.youtubeId && /^[a-zA-Z0-9_-]{11}$/.test(project.video.youtubeId) && (
+        <section className="project-video-section" aria-label={localize(project.video.title, language)}>
+          <h2>{localize(project.video.title, language)}</h2>
+          <div className="project-video-frame">
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${project.video.youtubeId}?rel=0`}
+              title={localize(project.video.title, language)}
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+          <p className="project-video-caption">{localize(project.video.caption, language)}</p>
+        </section>
+      )}
       <section className="detail-section">
         <h2>{content.overview}</h2>
         <div>
