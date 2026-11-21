@@ -70,7 +70,20 @@ export function HomePage({ language, content }) {
               <h3>{highlight.title}</h3>
               <ul>
                 {highlight.items.map((item) => (
-                  <li key={item.ko}>{localize(item, language)}</li>
+                  <li key={item.ko}>
+                    {item.url ? (
+                      <a
+                        className="highlight-link"
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {localize(item, language)} <span aria-hidden="true">↗</span>
+                      </a>
+                    ) : (
+                      localize(item, language)
+                    )}
+                  </li>
                 ))}
               </ul>
             </div>
