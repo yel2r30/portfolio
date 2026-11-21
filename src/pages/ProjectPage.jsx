@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { localize } from "../data/projects.js";
 import { ProjectMedia } from "../components/ProjectMedia.jsx";
 
@@ -13,48 +13,89 @@ function TextList({ items, language }) {
 }
 
 function ProjectVideo({ video, language }) {
+  const [expanded, setExpanded] = useState(false);
   const validVideo =
     (video?.youtubeId && /^[a-zA-Z0-9_-]{11}$/.test(video.youtubeId)) ||
     (video?.driveId && /^[a-zA-Z0-9_-]{20,}$/.test(video.driveId));
+
+  useEffect(() => {
+    if (!expanded) return undefined;
+    const previousOverflow = document.body.style.overflow;
+    const dismissOnEscape = (event) => {
+      if (event.key === "Escape") setExpanded(false);
+    };
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", dismissOnEscape);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", dismissOnEscape);
+    };
+  }, [expanded]);
+
   if (!validVideo) return null;
+
+  const videoTitle = localize(video.title, language);
+  const isDrive = Boolean(video.driveId);
   return (
-        <section className="project-video-section" aria-label={localize(video.title, language)}>
-          <h2>{localize(video.title, language)}</h2>
-          <div className="project-video-frame">
-            {video.driveId ? (
-              <iframe
-                src={`https://drive.google.com/file/d/${video.driveId}/preview`}
-                title={localize(video.title, language)}
-                loading="lazy"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allow="autoplay; fullscreen"
-                allowFullScreen
-              />
-            ) : (
-              <iframe
-                src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}?rel=0`}
-                title={localize(video.title, language)}
-                loading="lazy"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            )}
-          </div>
-          {video.caption && (
-            <p className="project-video-caption">{localize(video.caption, language)}</p>
-          )}
-          {video.driveId && video.fallback && (
-            <a
-              className="project-video-fallback text-link"
-              href={`https://drive.google.com/file/d/${video.driveId}/view`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {localize(video.fallback, language)} ↗
-            </a>
-          )}
-        </section>
+    <section className="project-video-section" aria-label={videoTitle}>
+      <h2>{videoTitle}</h2>
+      <div
+        className={`project-video-frame${isDrive ? " project-video-frame--drive" : ""}${expanded ? " is-expanded" : ""}`}
+      >
+        {isDrive ? (
+          <iframe
+            src={`https://drive.google.com/file/d/${video.driveId}/preview`}
+            title={videoTitle}
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          />
+        ) : (
+          <iframe
+            src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}?rel=0`}
+            title={videoTitle}
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        )}
+        {expanded && (
+          <button
+            type="button"
+            className="project-video-dismiss"
+            onClick={() => setExpanded(false)}
+            aria-label={language === "en" ? "Close expanded video" : "큰 영상 닫기"}
+          >
+            {language === "en" ? "Close ×" : "닫기 ×"}
+          </button>
+        )}
+      </div>
+      {isDrive && !expanded && (
+        <button
+          type="button"
+          className="project-video-expand"
+          onClick={() => setExpanded(true)}
+          aria-expanded={expanded}
+        >
+          {language === "en" ? "⛶ Enlarge video" : "⛶ 영상 크게 보기"}
+        </button>
+      )}
+      {video.caption && (
+        <p className="project-video-caption">{localize(video.caption, language)}</p>
+      )}
+      {isDrive && video.fallback && (
+        <a
+          className="project-video-fallback text-link"
+          href={`https://drive.google.com/file/d/${video.driveId}/view`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {localize(video.fallback, language)} ↗
+        </a>
+      )}
+    </section>
   );
 }
 

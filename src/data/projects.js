@@ -30,6 +30,13 @@ export const projects = [
       src: "assets/keystone/keystone-game-only.webp",
       alt: text("KeyStone 해달과 켈프 숲이 보이는 게임 타이틀 화면", "KeyStone game title screen featuring an otter and kelp forest"),
     },
+    images: [
+      {
+        src: "assets/keystone/keystone-gameplay.webp",
+        alt: text("KeyStone 플레이 화면 · 해달, 성게, 켈프 숲, 산소 게이지가 보이는 해저 장면", "KeyStone underwater gameplay with sea otter, urchins, kelp and oxygen meter"),
+        caption: text("실제 플레이 · 해달의 잠수와 산소 관리", "Gameplay · Diving and oxygen management"),
+      },
+    ],
     history: [
       text("Verse8 웹 프로토타입에서 Windows 오프라인 전시 빌드로 확장", "Expanded from a Verse8 web prototype to an offline Windows exhibition build"),
     ],
