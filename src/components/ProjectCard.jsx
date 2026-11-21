@@ -18,7 +18,18 @@ export function ProjectCard({ project, language, content, compact = false }) {
       />
       <div className="card-body">
         <div className="card-title">
-          <h3>{localize(project.name, language)}</h3>
+          <div className="card-name">
+            {project.icon && (
+              <img
+                className="project-app-icon"
+                src={`${import.meta.env.BASE_URL}${project.icon}`}
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+              />
+            )}
+            <h3>{localize(project.name, language)}</h3>
+          </div>
           <span aria-hidden="true">↗</span>
         </div>
         <p>{localize(project.summary, language)}</p>

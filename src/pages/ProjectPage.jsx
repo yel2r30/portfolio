@@ -31,8 +31,22 @@ export function ProjectPage({ project, language, content }) {
       </a>
       <header className="page-heading">
         <p className="eyebrow">{environment}</p>
-        <h1>{localize(project.name, language)}</h1>
-        <p className="lead">{localize(project.summary, language)}</p>
+        <div className="project-identity">
+          {project.icon && (
+            <img
+              className="project-app-icon project-app-icon--detail"
+              src={`${import.meta.env.BASE_URL}${project.icon}`}
+              alt=""
+              aria-hidden="true"
+              width="80"
+              height="80"
+            />
+          )}
+          <div className="project-identity-copy">
+            <h1>{localize(project.name, language)}</h1>
+            <p className="lead">{localize(project.summary, language)}</p>
+          </div>
+        </div>
       </header>
       <ProjectMedia
         key={project.slug}

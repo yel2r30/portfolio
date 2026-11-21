@@ -698,3 +698,49 @@ dd {
 @media (max-width: 700px) {
   .project-gallery { grid-template-columns: 1fr; gap: 22px; }
 }
+
+/* Optional square project icon: branding alongside the title, not a new media panel. */
+.card-name,
+.project-identity {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+.card-name {
+  gap: 14px;
+}
+.card-name h3 {
+  min-width: 0;
+}
+.project-identity {
+  gap: 22px;
+  align-items: flex-start;
+}
+.project-identity-copy {
+  min-width: 0;
+}
+.project-app-icon {
+  display: block;
+  flex: 0 0 auto;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 12px;
+  padding: 3px;
+  background: #090917;
+}
+.project-app-icon--detail {
+  width: 80px;
+  height: 80px;
+  border-radius: 17px;
+  padding: 4px;
+}
+.project-identity .lead {
+  margin-bottom: 0;
+}
+@media (max-width: 600px) {
+  .card-name { gap: 10px; }
+  .project-app-icon { width: 42px; height: 42px; border-radius: 10px; }
+  .project-app-icon--detail { width: 64px; height: 64px; border-radius: 13px; }
+  .project-identity { gap: 14px; }
+}
