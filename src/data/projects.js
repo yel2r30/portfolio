@@ -27,16 +27,9 @@ export const projects = [
       text("원스토어 AI Games 배포", "Released on ONE store AI Games"),
     ],
     image: {
-      src: "assets/keystone/keystone-game-only.webp",
-      alt: text("KeyStone 해달과 켈프 숲이 보이는 게임 타이틀 화면", "KeyStone game title screen featuring an otter and kelp forest"),
+      src: "assets/keystone/keystone-gameplay.webp",
+      alt: text("KeyStone 실제 플레이 화면 · 해달, 성게, 켈프 숲, 산소 게이지", "KeyStone gameplay featuring the sea otter, sea urchins, kelp and oxygen meter"),
     },
-    images: [
-      {
-        src: "assets/keystone/keystone-gameplay.webp",
-        alt: text("KeyStone 플레이 화면 · 해달, 성게, 켈프 숲, 산소 게이지가 보이는 해저 장면", "KeyStone underwater gameplay with sea otter, urchins, kelp and oxygen meter"),
-        caption: text("실제 플레이 · 해달의 잠수와 산소 관리", "Gameplay · Diving and oxygen management"),
-      },
-    ],
     history: [
       text("Verse8 웹 프로토타입에서 Windows 오프라인 전시 빌드로 확장", "Expanded from a Verse8 web prototype to an offline Windows exhibition build"),
     ],
@@ -699,10 +692,6 @@ export const projects = [
       text("2026 TU 게임챌린지 최우수상", "2026 TU Game Challenge · Top Award"),
       text("2026 지스타 전시 참여", "Exhibited at G-STAR 2026"),
     ],
-    image: {
-      src: "assets/legend-sword/legend-sword-game-only.webp",
-      alt: text("성검을 얻었는데 몸이 약하다 판타지 숲 게임 아트 발표 화면", "Fantasy forest artwork displayed for the Legend Sword game"),
-    },
     sections: {
       gameplay: [
         text("주인공은 검을 스테이지마다 제한된 횟수만 사용할 수 있습니다. 적을 직접 베기보다 밧줄·통나무·벌집·버섯 등의 환경 기믹을 작동시켜 연쇄 처치하는 것이 핵심입니다.", "Sword swings are limited per stage. Rather than attacking enemies directly, players trigger logs, hives, ropes and mushrooms to set off chain reactions."),
