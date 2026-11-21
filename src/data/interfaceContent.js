@@ -13,7 +13,8 @@ export const interfaceContent = {
     allWorks: "프로젝트 살펴보기",
     selected: "Selected Works",
     selectedText: "게임의 핵심 경험을 고민하며 제작한 대표 프로젝트입니다.",
-    what: "What I Design",
+    what: "Areas of Focus",
+    backgroundHeading: "Background & Highlights",
     contact: "Contact",
     contactNav: "CONTACT",
     additionalMaterials: "추가 자료",
@@ -44,8 +45,6 @@ export const interfaceContent = {
     skip: "본문으로 건너뛰기",
     footer: "RIN · Game Designer",
     viewAll: "View All Works",
-    about:
-      "게임의 규칙이 플레이어의 행동을 어떻게 바꾸는지에 관심이 있습니다. 개인 프로토타입부터 팀 프로젝트까지 다양한 환경에서 게임을 만들며, 플레이 테스트를 통해 발견한 문제를 다시 설계하는 과정을 중요하게 생각합니다.",
     inProgress: "개발 중인 프로젝트 · 막았을뿐인데",
   },
   en: {
@@ -62,7 +61,8 @@ export const interfaceContent = {
     allWorks: "Explore My Work",
     selected: "Selected Works",
     selectedText: "Selected projects built around distinctive gameplay ideas.",
-    what: "What I Design",
+    what: "Areas of Focus",
+    backgroundHeading: "Background & Highlights",
     contact: "Contact",
     contactNav: "CONTACT",
     additionalMaterials: "Additional Materials",
@@ -93,8 +93,6 @@ export const interfaceContent = {
     skip: "Skip to content",
     footer: "RIN · Game Designer",
     viewAll: "View All Works",
-    about:
-      "I am interested in how game rules shape player behavior. Across solo prototypes and team projects, I value the process of redesigning problems discovered through playtesting.",
     inProgress: "In development · 막았을뿐인데",
   },
 };
