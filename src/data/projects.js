@@ -12,45 +12,45 @@ export const projects = [
     category: "case",
     featured: true,
     homeOrder: 1,
-    summary: text(
-      "성게를 먹고 산소를 관리하며 켈프숲을 구하는 아케이드 생존 게임",
-      "An arcade survival game about eating sea urchins, managing oxygen and saving a kelp forest.",
-    ),
-    environment: "Verse8",
-    team: text("인턴십 · 1인 제작", "Internship · Solo"),
-    status: text("원스토어 AI Games 배포", "Released on ONE store AI Games"),
+    summary: text("해달이 되어 성게를 제거하고, 산소와 콤보를 관리해 켈프 숲을 회복시키는 엔드리스 아케이드", "An endless arcade game about eating sea urchins, managing oxygen and combos, and restoring a kelp forest."),
+    environment: "Verse8 · Phaser / React · Windows EXE",
+    team: text("Verse8 인턴십 · 개인 제작", "Verse8 internship · Solo project"),
+    status: text("원스토어 AI Games 배포 · 전시용 PC 빌드 제작", "Released on ONE store AI Games · Exhibition PC build"),
     roles: [
-      text(
-        "게임플레이 및 핵심 반복 구조 기획 · 개인 제작",
-        "Gameplay and core loop design · Solo production",
-      ),
-      text("Verse8 인턴십 팀장 경험", "Verse8 internship team lead experience"),
+      text("핵심 게임 루프 · 산소·점수·콤보 시스템 기획", "Core loop, oxygen, scoring and combo design"),
+      text("UI·아트 방향 설정 · 프로토타입 제작·밸런스 조정", "UI/art direction, prototyping and balancing"),
+      text("인턴십 팀장 · PC 전시 빌드 검증", "Internship team lead · Exhibition build testing"),
     ],
     color: "#cbded5",
     achievements: [
-      text("교내 공모전 장려상", "Encouragement award in a campus competition"),
+      text("교내 게임챌린지 장려상", "Campus game challenge encouragement award"),
       text("원스토어 AI Games 배포", "Released on ONE store AI Games"),
-      text("2026 지스타 출품 예정", "Planned for G-STAR 2026"),
+    ],
+    images: [{
+      src: "assets/keystone/keystone-award-presentation.jpg",
+      alt: text("KeyStone가 소개된 교내 게임챌린지 수상자 성과 발표 행사", "KeyStone showcased on screen at a university game challenge award presentation"),
+      caption: text("교내 게임챌린지 · 성과 발표 현장", "Campus game challenge · Presentation event"),
+    }],
+    history: [
+      text("Verse8 웹 프로토타입에서 Windows 오프라인 전시 빌드로 확장", "Expanded from a Verse8 web prototype to an offline Windows exhibition build"),
     ],
     sections: {
       gameplay: [
-        text(
-          "성게를 더 먹어 켈프숲을 구하는 행동과 수면으로 올라가 산소를 회복하는 행동 사이에서 선택합니다.",
-          "Choose between eating more sea urchins to save the kelp forest and returning to the surface to recover oxygen.",
-        ),
+        text("화면을 누른 채 방향을 조절해 해달을 이동시킵니다. 깊이 내려갈수록 고득점 성게가 등장하지만 산소도 빠르게 줄어, 콤보를 이어갈지 수면으로 돌아갈지 판단해야 합니다.", "Hold and steer to swim. Deeper water offers higher-value sea urchins but consumes oxygen faster, creating a trade-off between continuing combos and surfacing."),
+        text("성게를 제거하면 켈프가 되살아나는 변화를 통해 점수 획득과 생태계 회복을 같은 플레이 행동에 연결했습니다.", "Removing sea urchins also helps kelp recover, connecting score-chasing to the game's ecological theme."),
+      ],
+      contribution: [
+        text("위험–보상 구조, 성게·복어 상호작용, 점수·콤보·산소 HUD를 설계하고 AI 개발 도구를 활용해 구현·플레이 테스트·개선 과정을 진행했습니다.", "Designed the risk–reward loop, sea-life interactions, and score/combo/oxygen HUD; coordinated AI-assisted implementation, playtesting and iteration."),
+      ],
+      process: [
+        text("수심별 산소 소모와 성게 보상을 연결하고, 복어가 무한히 누적되어 퇴로를 막지 않도록 출현·퇴장 규칙을 조정했습니다. 플레이 중 학습하는 순차 튜토리얼도 기획했습니다.", "Linked oxygen drain and rewards to depth, tuned pufferfish circulation to avoid unfair routes being blocked, and designed an in-game step-by-step tutorial."),
       ],
       results: [
-        text(
-          "교내 공모전 장려상을 수상했으며 원스토어 AI Games에 배포했습니다. 2026 지스타 출품을 준비하고 있습니다.",
-          "Received a campus encouragement award and released on ONE store AI Games. A G-STAR 2026 exhibition is planned.",
-        ),
+        text("교내 게임챌린지 장려상 및 원스토어 AI Games 배포를 달성했고, 전시용 Windows 빌드의 로컬 순위표와 운영 흐름을 검증했습니다.", "Received a campus game challenge encouragement award, released on ONE store AI Games, and tested a Windows exhibition build with a local leaderboard."),
       ],
     },
-    cardRole: text(
-      "게임플레이 기획 · 개인 제작",
-      "Gameplay design · Solo production",
-    ),
-    focus: "Gameplay Design / Core Loop / Solo Production",
+    cardRole: text("게임플레이·시스템 기획 · 개인 제작", "Gameplay & system design · Solo project"),
+    focus: "Gameplay Design / Risk–Reward / Core Loop / Prototype & Iteration",
   },
   {
     slug: "computer-escape",
@@ -200,51 +200,34 @@ export const projects = [
     name: text("막았을뿐인데", "막았을뿐인데"),
     category: "case",
     featured: true,
-    summary: text(
-      "공격 버튼 없이 방패 방어와 타이밍 패링으로 싸우는 2D 액션",
-      "A 2D action game about shield defense and timed parries, with no attack button.",
-    ),
-    environment: "Unity",
-    team: text("개인 제작", "Solo"),
-    status: text("개발 중", "In development"),
+    summary: text("공격 버튼 없이 방패의 방향과 타이밍으로 적의 공격을 받아치는 액션 프로토타입", "A shield-only action prototype where facing and parry timing replace the attack button."),
+    environment: "Unity 2D · GPT Sites prototype",
+    team: text("개인 기획·프로토타이핑", "Solo design & prototyping"),
+    status: text("Unity 전투 프로토타입 개발 중", "Unity combat prototype in development"),
     roles: [
-      text(
-        "전투 규칙 기획 · 개인 프로토타이핑 및 개발",
-        "Combat rule design · Solo prototyping and development",
-      ),
+      text("전투 규칙 · 조작·방향·패링 판정 기획", "Combat rules, input/facing design and parry judgment"),
+      text("AI 도구 활용 웹·Unity 프로토타입 검증", "Web and Unity prototype validation with AI-assisted tools"),
     ],
     color: "#e3d8cd",
     history: [
-      text(
-        "GPT Sites 웹 프로토타입 제작 후 Unity로 개발",
-        "Development in Unity following a GPT Sites web prototype",
-      ),
+      text("GPT Sites 웹 실험에서 시작해 Unity 전투 실험으로 이전", "Moved from a GPT Sites web experiment to a Unity combat prototype"),
     ],
     sections: {
+      gameplay: [
+        text("방향키로 8방향 이동, WASD로 8방향 바라보기를 독립 조작하고 Space로 방패를 사용합니다. 공격 버튼이 없으며, 공격 직전의 정확한 방어가 패링으로 이어집니다.", "Arrow keys move in eight directions, WASD independently controls facing, and Space raises the shield. There is no attack button: precise defense timing enables parries."),
+      ],
+      contribution: [
+        text("공격 버튼을 없앤 제약에서 시작해 일반 막기와 받아치기를 구분하고, 방향·유효각·판정 시간·재사용 규칙을 정의했습니다.", "Started with the constraint of no direct attack, separating standard blocks from parries and defining direction, valid angles, timing windows and reuse rules."),
+      ],
       process: [
-        text(
-          "GPT Sites에서 웹 프로토타입을 제작한 뒤 Unity 개발로 이어가고 있습니다.",
-          "A GPT Sites web prototype is being developed further in Unity.",
-        ),
+        text("웹 실험에서 적 인식 거리와 공격 속도를 조정한 뒤 Unity로 옮겼습니다. Unity에서는 이동·방향·방패 상태 전환과 전방 방어 판정을 단계적으로 구현·테스트하고 있습니다.", "Iterated enemy detection and attack pacing in the web prototype, then moved to Unity to test independent movement/facing, shield state changes and frontal block judgment."),
       ],
       results: [
-        text(
-          "향후 핵심 대표작으로 발전시킬 계획입니다.",
-          "Planned to grow into a key portfolio project.",
-        ),
-      ],
-      gameplay: [
-        text(
-          "이동과 바라보는 방향을 독립적으로 제어하며, 방패 방어와 정확한 타이밍의 패링으로 싸웁니다.",
-          "Control movement and facing independently, using shield defense and precisely timed parries.",
-        ),
+        text("현재는 조작과 방패·패링의 기본 판정 검증 단계입니다. 기획서에 있는 적 연쇄 충돌·방 탐색·강화 시스템은 향후 확장 설계이며 완료 기능으로 표기하지 않습니다.", "The current prototype validates movement, shield behavior and basic parry rules. Chain collisions, room exploration and upgrades remain planned extensions, not finished features."),
       ],
     },
-    cardRole: text(
-      "전투 규칙 기획 · 개인 프로토타이핑",
-      "Combat rules · Solo prototyping",
-    ),
-    focus: "Combat Design / Game Rules / Prototyping",
+    cardRole: text("전투 시스템 기획 · Unity 프로토타이핑", "Combat systems · Unity prototyping"),
+    focus: "Combat Design / Input & Facing / Parry Rules / Prototyping",
   },
   {
     slug: "trunk",
@@ -449,74 +432,101 @@ export const projects = [
     slug: "frog-sokoban",
     name: text("개구리 소코반", "개구리 소코반"),
     category: "more",
-    summary: text(
-      "압력판·컨베이어·게이트·특수 바닥을 활용하는 소코반 이동 퍼즐",
-      "A Sokoban movement puzzle with pressure plates, conveyors, gates and special floor tiles.",
-    ),
-    environment: "HTML",
-    team: text(
-      "4인 그룹 · 본인 게임 개별 제작",
-      "Group of 4 · Individually produced game",
-    ),
-    status: text(
-      "개발 중 · itch.io 배포 예정",
-      "In development · Planned for itch.io",
-    ),
+    summary: text("개구리·알·벌레와 컨베이어·게이트·압력판을 활용하는 스테이지형 소코반 퍼즐", "A stage-based Sokoban puzzle combining frogs, eggs and bugs with conveyors, gates and pressure plates."),
+    environment: "HTML5 · Web",
+    team: text("4인 연구 그룹 · 개별 게임 1인 제작", "4-person study group · Individually produced game"),
+    status: text("40개 스테이지 설계·검증 진행 중", "40-stage design and validation in progress"),
     roles: [
-      text("팀장 · 개별 게임 1인 제작", "Team lead · Solo game production"),
+      text("연구 그룹 팀장 · 개인 게임 기획·제작", "Study group lead · Individual game design & production"),
+      text("퍼즐 규칙·레벨 설계·해법 및 난이도 검증", "Puzzle rules, level design, solution and difficulty validation"),
     ],
     history: [
-      text("자기설계교과 3회차", "Self-designed course, third iteration"),
+      text("자기설계교과 3회차 · 소코반 장르 분석 기반 실험", "Self-designed course, third project · Sokoban design study"),
     ],
     color: "#d7dfca",
-    cardRole: text(
-      "그룹 팀장 · 퍼즐 기획·개별 제작",
-      "Group lead · Puzzle design · Solo production",
-    ),
-    focus: "Puzzle Design / Rule Design / Level Design",
+    sections: {
+      gameplay: [
+        text("물체를 밀어 경로와 행동 순서를 계획하는 소코반에 알 부화·벌레 포획, 압력판·게이트, 방향이 바뀌는 컨베이어와 균열 바닥 같은 규칙을 더했습니다.", "Builds on Sokoban's push-and-plan rules with frog hatching, bug capture, pressure plates/gates, reversible conveyors and fragile floor tiles."),
+      ],
+      contribution: [
+        text("4인 그룹의 팀장을 맡되 게임은 각자 제작하는 형태였습니다. 개인 게임의 규칙과 레벨을 설계하고, 두 버전의 40개 스테이지에 대한 풀이와 기믹 필요성을 분석했습니다.", "Led a four-person study group where each member built a separate game. Designed this game's rules and levels, analyzing solutions and mechanic necessity across 40 stage variants."),
+      ],
+      process: [
+        text("규칙 소개 → 기본 적용 → 조합 문제의 학습 흐름을 설계하고, 최단 풀이가 실제 기믹을 우회하는 사례와 스테이지 간 상태 계승 문제를 찾아 재검토 항목으로 기록했습니다.", "Structured learning from introducing a rule to combining it with others, and recorded bypass solutions and cross-stage state carryover issues for level redesign."),
+      ],
+      results: [
+        text("VER.1·VER.2를 포함한 40개 스테이지의 설계 및 해법 분석 자료를 마련했습니다. 튜토리얼과 최종 난이도 조정은 계속 진행 중입니다.", "Prepared design and solution-analysis materials for 40 stage variants across VER.1 and VER.2. Tutorial and final difficulty tuning remain in progress."),
+      ],
+    },
+    cardRole: text("퍼즐 기획 · 레벨 디자인 · 검증", "Puzzle design · Level design · Validation"),
+    focus: "Puzzle Design / Level Design / Rule Introduction / Solution Testing",
   },
   {
     slug: "mystery-number",
     name: text("Mystery Number", "Mystery Number"),
     category: "more",
-    summary: text("모바일 숫자 추리 퍼즐", "A mobile number deduction puzzle."),
-    environment: "Verse8",
-    team: text("인턴십 · 1인 제작", "Internship · Solo"),
-    status: text(
-      "기본 기능 프로토타입 · 작업 보류",
-      "Basic-feature prototype · On hold",
-    ),
+    summary: text("숨겨진 숫자를 상대로 싸울지 피할지 판단하는 모바일 숫자 추리·위험 선택 퍼즐", "A mobile number puzzle built around hidden values, risk assessment and deduction."),
+    environment: "Verse8 · React / TypeScript",
+    team: text("인턴십 · 개인 기획·프로토타이핑", "Internship · Solo design & prototyping"),
+    status: text("기본 기능 프로토타입 · 개발 보류", "Core prototype · Development on hold"),
     roles: [
-      text("인턴십 팀장 · 1인 제작", "Internship team lead · Solo production"),
+      text("일반·용사 모드의 숫자 판정 및 보상 구조 기획", "Normal/Hero mode number rules and rewards design"),
+      text("힌트 아이템 · 난이도·스테이지 구조 설계", "Hint item, difficulty and stage structure design"),
     ],
     color: "#ddd9cd",
-    cardRole: text(
-      "퍼즐 기획 · 개인 프로토타이핑",
-      "Puzzle design · Solo prototyping",
-    ),
-    focus: "Puzzle Design / Prototyping",
     history: [
-      text(
-        "Verse8 인턴십 중 개인 제작. 에셋 및 완성도 작업 미완료, KeyStone 우선 개발로 보류",
-        "Produced individually during the Verse8 internship. Assets and polish remain unfinished; paused to prioritize KeyStone.",
-      ),
+      text("Verse8 인턴십 중 개인 기획. KeyStone 개발을 우선하면서 추가 제작 보류", "Solo design during Verse8 internship; paused to prioritize KeyStone"),
     ],
+    sections: {
+      gameplay: [
+        text("일반 모드는 숨겨진 적 숫자와 내 숫자를 비교해 전투 또는 회피를 선택하는 위험 판단 방식입니다. 용사 모드는 숫자를 직접 추측하고 힌트로 정답을 좁히도록 구상했습니다.", "Normal mode uses fight-or-flee decisions against a hidden enemy number. Hero mode is designed around entering guesses and narrowing candidates through hints."),
+      ],
+      contribution: [
+        text("두 모드가 숫자 판정과 보상 규칙을 공유하도록 설계하고, 나침반·업다운·숫자 야구 등의 정보 아이템과 높은 점수를 위한 위험–보상 구조를 기획했습니다.", "Designed shared number-based outcomes across two modes and planned compass, up/down and number-baseball hints with risk–reward scoring."),
+      ],
+      results: [
+        text("기본 기능을 시험하는 프로토타입 단계에서 보류했습니다. 기획서의 15개 스테이지·무한 모드·마왕전은 전체 구현이 확인된 기능이 아닌 기획 범위입니다.", "Paused at the basic-feature prototype stage. The 15-stage campaign, endless mode and final boss are design scope, not verified completed features."),
+      ],
+    },
+    cardRole: text("숫자 퍼즐 · 판정·보상 설계", "Number puzzle · Rules & rewards"),
+    focus: "Puzzle Rules / Risk–Reward / Prototype & Systems",
   },
   {
     slug: "rcc-factory",
     name: text("RCC Factory", "RCC Factory"),
     category: "more",
-    summary: text("모바일 방치형 게임", "A mobile idle game."),
-    environment: "Unity",
-    team: text("4인 팀", "Team of 4"),
-    status: text("제작 완료", "Completed"),
-    roles: [text("팀장 · 기획", "Team lead · Game design")],
-    history: [
-      text("자기설계교과 1회차", "Self-designed course, first iteration"),
+    summary: text("치즈떡을 자동 생산·판매하고 농장 재료로 공장을 강화하며 도감을 채우는 방치형 게임", "An idle factory game about producing, selling and collecting cheese rice cakes while upgrading with farm resources."),
+    environment: "Unity · Mobile",
+    team: text("4인 팀 · 팀장·기획", "4-person team · Team lead & game design"),
+    status: text("팀 프로젝트 제작 완료", "Completed team project"),
+    roles: [
+      text("팀장 · 게임 기획·생산·성장 시스템 설계", "Team lead · Game, production and progression design"),
+      text("공장·농장 경제 순환 및 도감·UI 구조 기획", "Factory/farm economy loop, collection and UI structure design"),
     ],
     color: "#cfdcda",
-    cardRole: text("팀장 · 게임 기획", "Team lead · Game planning"),
-    focus: "Game Planning / Team Leadership",
+    image: {
+      src: "assets/rcc-factory/rcc-factory-logo.png",
+      alt: text("RCC Factory 치즈떡 공장 게임 로고", "RCC Factory cheese rice-cake game logo"),
+    },
+    history: [
+      text("자기설계교과 1회차 · 4인 팀 제작", "Self-designed course, first project · Four-person team"),
+    ],
+    sections: {
+      gameplay: [
+        text("공장에서 치즈떡을 자동 생산·판매해 코인을 얻고, 농장에서 수확한 강화 재료로 기계를 성장시킵니다. 강화·재료 연구를 통해 새로운 종류를 발견하고 도감에 수집합니다.", "Factories automatically produce and sell cheese rice cakes for coins, while farm harvests provide upgrade materials. Upgrades and research unlock additional varieties for the collection."),
+      ],
+      contribution: [
+        text("팀장으로서 자동 생산 → 판매 → 투자, 농장 수확 → 공장 강화의 두 성장 순환을 설계하고, 공장·농장·도감 화면의 흐름을 기획했습니다.", "As team lead, designed the production → sales → investment and farming → upgrades loops, plus the factory, farm and collection-screen flow."),
+      ],
+      process: [
+        text("Canva에서 화면 구조와 생산·연구·강화 관계를 정리하고, 짧은 조작으로도 성장과 수집 보상이 체감되도록 성장 단계를 구분했습니다.", "Mapped UI flows and production/research/upgrade relationships in Canva, focusing on short interactions and visible collection/progression milestones."),
+      ],
+      results: [
+        text("4인 팀의 Unity 게임을 제작 완료했습니다. 기획서의 인테리어·알바·스토리는 확장안으로, 실제 빌드에 반영되지 않은 기능과 구분했습니다.", "Completed the four-person Unity project. Decoration, employee and story systems were planned extensions and are not presented as shipped features."),
+      ],
+    },
+    cardRole: text("팀장 · 방치형 경제·성장 기획", "Team lead · Idle economy & progression"),
+    focus: "Idle Game Design / Economy Loops / Progression / Team Leadership",
   },
   {
     slug: "long-tailed-tit",
@@ -631,36 +641,38 @@ export const projects = [
     slug: "legend-sword",
     name: text("성검을 얻었는데 몸이 약하다", "성검을 얻었는데 몸이 약하다"),
     category: "more",
-    summary: text("Unity 팀 프로젝트", "A Unity team project."),
-    environment: "Unity",
-    team: text("팀 프로젝트", "Team project"),
+    summary: text("제한된 검 사용 횟수로 환경 장치를 작동시키고 연쇄 처치를 만드는 퍼즐 액션 플랫포머", "A puzzle-action platformer using limited sword swings to trigger environmental chain reactions."),
+    environment: "Unity · PC",
+    team: text("6인 팀 · 핵심 기능 구현", "6-person team · Core gameplay implementation"),
     roles: [
-      text(
-        "핵심 게임 기능 구현 (AI 활용)",
-        "Core gameplay implementation (AI-assisted)",
-      ),
+      text("프로그래밍 담당 · 게임 핵심 기능 구현 (AI 활용)", "Programming role · Core gameplay implementation (AI-assisted)"),
     ],
     color: "#d9d5df",
     achievements: [
-      text(
-        "팀 프로젝트 교내 공모전 최우수상",
-        "Team project top award in a campus competition",
-      ),
-      text("2026 지스타 출품 예정", "Planned for G-STAR 2026"),
+      text("제4회 교내 TU 게임챌린지 팀 프로젝트 최우수상", "Top team award, 4th TU Game Challenge"),
+      text("2026 지스타 전시 참여", "Exhibited at G-STAR 2026"),
     ],
+    images: [{
+      src: "assets/legend-sword/legend-sword-award.jpg",
+      alt: text("성검을 얻었는데 몸이 약하다의 교내 게임챌린지 시상식 사진", "University game challenge award presentation for the Legend Sword team"),
+      caption: text("교내 게임챌린지 · 시상 현장", "Campus game challenge · Award ceremony"),
+    }],
     sections: {
+      gameplay: [
+        text("주인공은 검을 스테이지마다 제한된 횟수만 사용할 수 있습니다. 적을 직접 베기보다 밧줄·통나무·벌집·버섯 등의 환경 기믹을 작동시켜 연쇄 처치하는 것이 핵심입니다.", "Sword swings are limited per stage. Rather than attacking enemies directly, players trigger logs, hives, ropes and mushrooms to set off chain reactions."),
+      ],
       contribution: [
-        text(
-          "게임의 핵심 기능 구현을 담당했으며, AI를 개발 보조 도구로 활용해 기능을 제작하고 검토했습니다.",
-          "Responsible for implementing core gameplay functionality, using AI-assisted tools for implementation and review.",
-        ),
+        text("6인 팀에서 프로그래밍을 맡아 게임의 핵심 플레이 기능을 구현했습니다. AI 도구를 보조적으로 활용해 기능을 제작하고 동작을 검토했으며, 전체 기획·원화·스테이지 디자인을 단독 담당한 것은 아닙니다.", "Handled core gameplay programming in a six-person team, using AI assistance for implementation and review. Overall concept, artwork and stage design were shared with other roles."),
+      ],
+      process: [
+        text("기획서의 '검 사용 횟수 제한 → 환경 트리거 → 연쇄 처치' 흐름이 게임 내에서 작동하도록 핵심 기능 구현에 집중했습니다.", "Focused on implementing the core loop of limited sword swings, environmental triggers and chain defeats defined by the team."),
+      ],
+      results: [
+        text("교내 게임챌린지 최우수상 수상 및 2026 지스타 전시에 참여한 팀 프로젝트입니다.", "A team project recognized with a campus game challenge top award and shown at G-STAR 2026."),
       ],
     },
-    cardRole: text(
-      "핵심 게임 기능 구현 (AI 활용)",
-      "Core gameplay implementation (AI-assisted)",
-    ),
-    focus: "Core Gameplay Implementation / AI-assisted Development",
+    cardRole: text("핵심 게임 기능 구현 (AI 활용)", "Core gameplay programming (AI-assisted)"),
+    focus: "Core Gameplay Implementation / Puzzle Action / AI-assisted Development",
   },
   {
     slug: "world-first-kill",
