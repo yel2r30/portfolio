@@ -22,7 +22,20 @@ export const backgroundHighlights = [
     title: "Experience",
     items: [
       text("Verse8 인턴십 · 팀장", "Verse8 internship · Team lead"),
-      text("UPTRAND 동아리 부회장", "UPTRAND club · Vice president"),
+      {
+        ...text(
+          "UPTRAND · 2024년 2학기~현재 / 2026 부회장",
+          "UPTRAND · Fall 2024–present / Vice President (2026)",
+        ),
+        url: "https://uptrand.com/",
+      },
+      {
+        ...text(
+          "GAME OVER? · 2026 제1회 컨퍼런스 운영진",
+          "GAME OVER? · Organizing team, inaugural conference (2026)",
+        ),
+        url: "https://game-dev-conference-gameover.github.io/GAMEOVER_Homepage/",
+      },
       text("재밌넥 4기 수료 · 미믹 취급 주의 제작 / Grave Shot 선정 과제", "Completed Jaemitnet cohort 4 · Mimic project / Grave Shot selected project"),
     ],
   },

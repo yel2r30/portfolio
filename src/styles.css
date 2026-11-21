@@ -1066,3 +1066,19 @@ dd {
 @media (max-width: 520px) {
   .sprite-evolution-button { width: 36px; height: 36px; }
 }
+/* Compact, keyboard-accessible external links in Background & Highlights. */
+.highlight-row .highlight-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 120ms ease;
+}
+.highlight-row .highlight-link:hover,
+.highlight-row .highlight-link:focus-visible {
+  text-decoration-color: currentColor;
+}
+.highlight-row .highlight-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
