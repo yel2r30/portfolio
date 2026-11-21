@@ -766,3 +766,42 @@ dd {
   .project-detail--long-tailed-tit .project-gallery-item:first-child { grid-column: auto; }
   .project-detail--long-tailed-tit .project-gallery-item .project-image { max-height: 440px; }
 }
+/* Compact front/back comparisons for the physical card game. */
+.card-ui-showcase {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 16px;
+}
+.card-ui-sample {
+  min-width: 0;
+  margin: 0;
+  padding: 15px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.card-ui-images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.card-ui-images img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1019 / 1536;
+  object-fit: contain;
+  border-radius: 5px;
+}
+.card-ui-sample figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 12px;
+}
+.card-ui-sample figcaption strong { font-size: .92rem; }
+.card-ui-sample figcaption span { color: var(--muted); font-size: .8rem; }
+@media (max-width: 760px) {
+  .card-ui-showcase { grid-template-columns: 1fr; }
+  .card-ui-sample { max-width: 480px; }
+}

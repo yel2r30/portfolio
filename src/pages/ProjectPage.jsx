@@ -120,6 +120,33 @@ export function ProjectPage({ project, language, content }) {
           </div>
         </section>
       )}
+      {project.cardShowcase?.length > 0 && (
+        <section className="detail-section">
+          <h2>{language === "en" ? "Card UI" : "카드 UI"}</h2>
+          <div className="card-ui-showcase">
+            {project.cardShowcase.map((sample) => (
+              <figure className="card-ui-sample" key={sample.frontSrc}>
+                <div className="card-ui-images">
+                  <img
+                    src={`${import.meta.env.BASE_URL}${sample.backSrc}`}
+                    alt={localize(sample.backAlt, language)}
+                    loading="lazy"
+                  />
+                  <img
+                    src={`${import.meta.env.BASE_URL}${sample.frontSrc}`}
+                    alt={localize(sample.frontAlt, language)}
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption>
+                  <strong>{localize(sample.label, language)}</strong>
+                  <span>{localize(sample.note, language)}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
       <section className="detail-section">
         <h2>{content.contribution}</h2>
         <div>
