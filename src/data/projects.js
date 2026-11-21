@@ -23,14 +23,13 @@ export const projects = [
     ],
     color: "#cbded5",
     achievements: [
-      text("교내 게임챌린지 장려상", "Campus game challenge encouragement award"),
+      text("2026 TU 게임챌린지 장려상", "2026 TU Game Challenge · Encouragement Award"),
       text("원스토어 AI Games 배포", "Released on ONE store AI Games"),
     ],
-    images: [{
-      src: "assets/keystone/keystone-award-presentation.jpg",
-      alt: text("KeyStone가 소개된 교내 게임챌린지 수상자 성과 발표 행사", "KeyStone showcased on screen at a university game challenge award presentation"),
-      caption: text("교내 게임챌린지 · 성과 발표 현장", "Campus game challenge · Presentation event"),
-    }],
+    image: {
+      src: "assets/keystone/keystone-game-only.webp",
+      alt: text("KeyStone 해달과 켈프 숲이 보이는 게임 타이틀 화면", "KeyStone game title screen featuring an otter and kelp forest"),
+    },
     history: [
       text("Verse8 웹 프로토타입에서 Windows 오프라인 전시 빌드로 확장", "Expanded from a Verse8 web prototype to an offline Windows exhibition build"),
     ],
@@ -46,7 +45,7 @@ export const projects = [
         text("수심별 산소 소모와 성게 보상을 연결하고, 복어가 무한히 누적되어 퇴로를 막지 않도록 출현·퇴장 규칙을 조정했습니다. 플레이 중 학습하는 순차 튜토리얼도 기획했습니다.", "Linked oxygen drain and rewards to depth, tuned pufferfish circulation to avoid unfair routes being blocked, and designed an in-game step-by-step tutorial."),
       ],
       results: [
-        text("교내 게임챌린지 장려상 및 원스토어 AI Games 배포를 달성했고, 전시용 Windows 빌드의 로컬 순위표와 운영 흐름을 검증했습니다.", "Received a campus game challenge encouragement award, released on ONE store AI Games, and tested a Windows exhibition build with a local leaderboard."),
+        text("2026 TU 게임챌린지 장려상 및 원스토어 AI Games 배포를 달성했고, 전시용 Windows 빌드의 로컬 순위표와 운영 흐름을 검증했습니다.", "Received a 2026 TU Game Challenge Encouragement Award, released on ONE store AI Games, and tested a Windows exhibition build with a local leaderboard."),
       ],
     },
     cardRole: text("게임플레이·시스템 기획 · 개인 제작", "Gameplay & system design · Solo project"),
@@ -76,7 +75,7 @@ export const projects = [
     ],
     color: "#d9d4e8",
     achievements: [
-      text("교내 공모전 우수상", "Excellence award in a campus competition"),
+      text("2025 TU 게임챌린지 우수상", "2025 TU Game Challenge · Excellence Award"),
       text("이전 지스타 전시", "Previously exhibited at G-STAR"),
     ],
     cardRole: text("팀장 · 기획 · 아트", "Team lead · Design · Art"),
@@ -320,6 +319,9 @@ export const projects = [
     team: text("게임 기획·개발", "Game design and development"),
     status: text("2026 TU 게임챌린지 장려상", "2026 TU Game Challenge · Encouragement Award"),
     period: text("2026.07.04–07.06", "July 4–6, 2026"),
+    history: [
+      text("재밌넥 4기 선정 과제 · 2026 TU 게임챌린지 장려상", "Jaemitnet cohort 4 selected project · 2026 TU Game Challenge Encouragement Award"),
+    ],
     roles: [
       text("게임 기획 · 전투 및 웨이브 구조 설계", "Game design · Combat and wave system"),
       text("프로토타입 개발 및 플레이 검증", "Prototype development and gameplay testing"),
@@ -408,6 +410,7 @@ export const projects = [
       "A four-person game project created during Jaemitnet cohort 4.",
     ),
     environment: text("게임 프로젝트 · 기획/UI", "Game project · Design/UI"),
+    status: text("재밌넥 4기 수료 작품", "Jaemitnet cohort 4 completion project"),
     team: text("재밌넥 4기 · 4인 팀", "Jaemitnet cohort 4 · 4-person team"),
     roles: [
       text("게임 기획 · UI 담당", "Game planning · UI"),
@@ -565,11 +568,6 @@ export const projects = [
         alt: text("테이블 위에 전시된 게임 카드와 체험 준비물", "Tabletop display with card decks and game materials"),
         caption: text("전시·체험 테이블", "Exhibition and playtest table"),
       },
-      {
-        src: "assets/long-tailed-tit/long-tailed-tit-exhibition.webp",
-        alt: text("오목눈이의 역습 보드게임 제작 활동 전시 포스터", "Project poster presenting the card game's production process"),
-        caption: text("제작 과정 전시 포스터", "Development exhibition poster"),
-      },
     ],
     history: [
       text("자기설계교과 2회차 · 팀 프로젝트", "Self-designed coursework, second project"),
@@ -649,14 +647,13 @@ export const projects = [
     ],
     color: "#d9d5df",
     achievements: [
-      text("제4회 교내 TU 게임챌린지 팀 프로젝트 최우수상", "Top team award, 4th TU Game Challenge"),
+      text("2026 TU 게임챌린지 최우수상", "2026 TU Game Challenge · Top Award"),
       text("2026 지스타 전시 참여", "Exhibited at G-STAR 2026"),
     ],
-    images: [{
-      src: "assets/legend-sword/legend-sword-award.jpg",
-      alt: text("성검을 얻었는데 몸이 약하다의 교내 게임챌린지 시상식 사진", "University game challenge award presentation for the Legend Sword team"),
-      caption: text("교내 게임챌린지 · 시상 현장", "Campus game challenge · Award ceremony"),
-    }],
+    image: {
+      src: "assets/legend-sword/legend-sword-game-only.webp",
+      alt: text("성검을 얻었는데 몸이 약하다 판타지 숲 게임 아트 발표 화면", "Fantasy forest artwork displayed for the Legend Sword game"),
+    },
     sections: {
       gameplay: [
         text("주인공은 검을 스테이지마다 제한된 횟수만 사용할 수 있습니다. 적을 직접 베기보다 밧줄·통나무·벌집·버섯 등의 환경 기믹을 작동시켜 연쇄 처치하는 것이 핵심입니다.", "Sword swings are limited per stage. Rather than attacking enemies directly, players trigger logs, hives, ropes and mushrooms to set off chain reactions."),
@@ -668,7 +665,7 @@ export const projects = [
         text("기획서의 '검 사용 횟수 제한 → 환경 트리거 → 연쇄 처치' 흐름이 게임 내에서 작동하도록 핵심 기능 구현에 집중했습니다.", "Focused on implementing the core loop of limited sword swings, environmental triggers and chain defeats defined by the team."),
       ],
       results: [
-        text("교내 게임챌린지 최우수상 수상 및 2026 지스타 전시에 참여한 팀 프로젝트입니다.", "A team project recognized with a campus game challenge top award and shown at G-STAR 2026."),
+        text("2026 TU 게임챌린지 최우수상 수상 및 2026 지스타 전시에 참여한 팀 프로젝트입니다.", "A team project recognized with a top award at the 2026 TU Game Challenge and shown at G-STAR 2026."),
       ],
     },
     cardRole: text("핵심 게임 기능 구현 (AI 활용)", "Core gameplay programming (AI-assisted)"),

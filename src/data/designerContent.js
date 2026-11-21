@@ -23,14 +23,15 @@ export const backgroundHighlights = [
     items: [
       text("Verse8 인턴십 · 팀장", "Verse8 internship · Team lead"),
       text("UPTRAND 동아리 부회장", "UPTRAND club · Vice president"),
+      text("재밌넥 4기 수료 · 미믹 취급 주의 제작 / Grave Shot 선정 과제", "Completed Jaemitnet cohort 4 · Mimic project / Grave Shot selected project"),
     ],
   },
   {
     title: "Awards",
     items: [
-      text("KeyStone · 교내 공모전 장려상", "KeyStone · Campus encouragement award"),
-      text("컴퓨터 탈출기 · 교내 공모전 우수상", "컴퓨터 탈출기 · Campus excellence award"),
-      text("성검을 얻었는데 몸이 약하다 · 팀 프로젝트 최우수상", "성검을 얻었는데 몸이 약하다 · Team project top award"),
+      text("2026 TU 게임챌린지 · 성검 최우수상", "2026 TU Game Challenge · Legend Sword, Top Award"),
+      text("2026 TU 게임챌린지 · KeyStone / Grave Shot 장려상", "2026 TU Game Challenge · KeyStone / Grave Shot, Encouragement Awards"),
+      text("2025 TU 게임챌린지 · 컴퓨터 탈출기 우수상", "2025 TU Game Challenge · Computer Escape, Excellence Award"),
     ],
   },
   {
