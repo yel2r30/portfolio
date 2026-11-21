@@ -628,3 +628,43 @@ dd {
     gap: 12px;
   }
 }
+
+/* Compact supporting information below Selected Works. */
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 36px;
+  padding: 0;
+  margin: 28px 0 0;
+  list-style: none;
+}
+.focus-grid li {
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
+  font-size: clamp(1rem, 1.6vw, 1.18rem);
+  font-weight: 600;
+  line-height: 1.4;
+}
+.highlight-row {
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 26px;
+  padding: 20px 0;
+}
+.highlight-row h3 {
+  margin: 0;
+}
+.highlight-row ul {
+  font-size: 0.9rem;
+}
+.contact-links {
+  margin-top: 28px;
+}
+@media (max-width: 600px) {
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+  .highlight-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
