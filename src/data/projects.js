@@ -88,6 +88,7 @@ export const projects = [
   {
     slug: "orbit",
     name: text("ORBIT", "ORBIT"),
+    icon: "assets/orbit/ORBIT_app_icon.webp",
     category: "case",
     featured: true,
     homeOrder: 3,
