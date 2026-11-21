@@ -938,3 +938,70 @@ dd {
   .sprite-preview-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
   .sprite-preview-item { padding: 8px 5px 10px; }
 }
+
+/* Each selected evolution stage loads only five compact sprite sheets. */
+.sprite-evolution-picker {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 18px;
+}
+.sprite-evolution-label {
+  font-weight: 600;
+  font-size: .89rem;
+  margin-right: 7px;
+}
+.sprite-evolution-button {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  font: inherit;
+}
+.sprite-evolution-button:hover {
+  background: var(--surface);
+}
+.sprite-evolution-button.is-active {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+.sprite-evolution-button:focus-visible {
+  outline: 3px solid #55bcd7;
+  outline-offset: 3px;
+}
+.sprite-evolution-progress {
+  font-size: .82rem;
+  color: var(--muted);
+  margin-left: 7px;
+  font-variant-numeric: tabular-nums;
+}
+.sprite-preview-sheet {
+  display: block;
+  width: 128px;
+  height: 128px;
+  margin: 0 auto;
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  image-rendering: pixelated;
+  animation: sprite-evolution-loop var(--sprite-duration) steps(var(--sprite-frames)) infinite;
+}
+@keyframes sprite-evolution-loop {
+  from { background-position: 0 0; }
+  to { background-position: var(--sprite-end) 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sprite-preview-sheet {
+    animation: none;
+    background-position: 0 0;
+  }
+}
+@media (max-width: 520px) {
+  .sprite-evolution-button { width: 36px; height: 36px; }
+}

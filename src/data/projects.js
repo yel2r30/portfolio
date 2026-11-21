@@ -690,8 +690,8 @@ export const projects = [
     ),
     category: "art",
     summary: text(
-      "제공받은 원화 기반 몬스터 도트 애니메이션",
-      "Monster pixel animation based on supplied concept art.",
+      "제공받은 원화를 바탕으로 몬스터 5종 × 진화 5단계의 도트 애니메이션 작업",
+      "Pixel animations for five monster types across five evolution stages, based on supplied concept art.",
     ),
     environment: text("그래픽·애니메이션", "Art & Animation"),
     team: text("그래픽 작업 참여", "Art contribution"),
@@ -702,26 +702,61 @@ export const projects = [
         label: text("늑대", "Wolf"),
         src: "assets/world-first-kill/motion/wolf-motion.webp",
         stillSrc: "assets/world-first-kill/motion/wolf-still.webp",
+        stages: [
+          { sheet: "assets/world-first-kill/evolution/wolf-1.png", frames: 8 },
+          { sheet: "assets/world-first-kill/evolution/wolf-2.png", frames: 7 },
+          { sheet: "assets/world-first-kill/evolution/wolf-3.png", frames: 8 },
+          { sheet: "assets/world-first-kill/evolution/wolf-4.png", frames: 8 },
+          { motion: "assets/world-first-kill/motion/wolf-motion.webp", still: "assets/world-first-kill/motion/wolf-still.webp" },
+        ],
       },
       {
         label: text("슬라임", "Slime"),
         src: "assets/world-first-kill/motion/slime-motion.webp",
         stillSrc: "assets/world-first-kill/motion/slime-still.webp",
+        stages: [
+          { sheet: "assets/world-first-kill/evolution/slime-1.png", frames: 10 },
+          { sheet: "assets/world-first-kill/evolution/slime-2.png", frames: 14 },
+          { sheet: "assets/world-first-kill/evolution/slime-3.png", frames: 11 },
+          { sheet: "assets/world-first-kill/evolution/slime-4.png", frames: 11 },
+          { motion: "assets/world-first-kill/motion/slime-motion.webp", still: "assets/world-first-kill/motion/slime-still.webp" },
+        ],
       },
       {
         label: text("고블린", "Goblin"),
         src: "assets/world-first-kill/motion/goblin-motion.webp",
         stillSrc: "assets/world-first-kill/motion/goblin-still.webp",
+        stages: [
+          { sheet: "assets/world-first-kill/evolution/goblin-1.png", frames: 6 },
+          { sheet: "assets/world-first-kill/evolution/goblin-2.png", frames: 6 },
+          { sheet: "assets/world-first-kill/evolution/goblin-3.png", frames: 6 },
+          { sheet: "assets/world-first-kill/evolution/goblin-4.png", frames: 6 },
+          { motion: "assets/world-first-kill/motion/goblin-motion.webp", still: "assets/world-first-kill/motion/goblin-still.webp" },
+        ],
       },
       {
         label: text("스켈레톤", "Skeleton"),
         src: "assets/world-first-kill/motion/skeleton-motion.webp",
         stillSrc: "assets/world-first-kill/motion/skeleton-still.webp",
+        stages: [
+          { sheet: "assets/world-first-kill/evolution/skeleton-1.png", frames: 9 },
+          { sheet: "assets/world-first-kill/evolution/skeleton-2.png", frames: 9 },
+          { sheet: "assets/world-first-kill/evolution/skeleton-3.png", frames: 9 },
+          { sheet: "assets/world-first-kill/evolution/skeleton-4.png", frames: 9 },
+          { motion: "assets/world-first-kill/motion/skeleton-motion.webp", still: "assets/world-first-kill/motion/skeleton-still.webp" },
+        ],
       },
       {
         label: text("골렘", "Golem"),
         src: "assets/world-first-kill/motion/golem-motion.webp",
         stillSrc: "assets/world-first-kill/motion/golem-still.webp",
+        stages: [
+          { sheet: "assets/world-first-kill/evolution/golem-1.png", frames: 10 },
+          { sheet: "assets/world-first-kill/evolution/golem-2.png", frames: 10 },
+          { sheet: "assets/world-first-kill/evolution/golem-3.png", frames: 10 },
+          { sheet: "assets/world-first-kill/evolution/golem-4.png", frames: 10 },
+          { motion: "assets/world-first-kill/motion/golem-motion.webp", still: "assets/world-first-kill/motion/golem-still.webp" },
+        ],
       },
     ],
     image: {
@@ -730,20 +765,20 @@ export const projects = [
     },
     images: [{
       src: "assets/world-first-kill/wfkc-monster-animation-sheets.svg",
-      alt: text("늑대·슬라임·고블린·스켈레톤·골렘 애니메이션 프레임 시트", "Animation frame sheets for wolf, slime, goblin, skeleton and golem"),
-      caption: text("몬스터 5종의 도트 애니메이션 프레임", "Pixel animation frames for five monster types"),
+      alt: text("몬스터 5종의 5단계 진화 스프라이트 시트 모음", "Evolution stage 5 sprite sheets for all five monster types"),
+      caption: text("5단계 진화 스프라이트 시트 비교", "Evolution stage 5 sprite sheet comparison"),
     }],
     sections: {
       contribution: [
         text(
-          "팀에서 제공받은 원화를 바탕으로 늑대·슬라임·고블린·스켈레톤·골렘의 몬스터 도트 애니메이션 프레임을 작업했습니다. 캐릭터 원화나 전체 게임 디자인은 담당하지 않았습니다.",
-          "Worked on pixel animation frames for wolf, slime, goblin, skeleton and golem monsters based on supplied character art. The original character concepts and overall game design were not my responsibility.",
+          "제공받은 원화를 바탕으로 늑대·슬라임·고블린·스켈레톤·골렘 5종의 진화 1~5단계 도트 애니메이션을 작업했습니다. 캐릭터 원화와 게임 전체 기획은 담당하지 않았습니다.",
+          "Created frame-based pixel animations for five evolution stages of each monster type: wolf, slime, goblin, skeleton and golem, based on provided concept art. Original character concepts and overall game design were not my role.",
         ),
       ],
       results: [
         text(
-          "몬스터 5종의 스프라이트 시트를 정리했습니다. 공개된 자료는 움직임 프레임 결과물이며 게임 전체 플레이 화면은 아닙니다.",
-          "Prepared sprite sheets for five monster types. These show animation frames, not a full in-game gameplay capture.",
+          "몬스터 5종 × 진화 5단계, 총 25개의 애니메이션 스프라이트 시트를 정리했습니다. 공개된 자료는 애니메이션 프레임 결과물이며 게임 플레이 영상은 아닙니다.",
+          "Prepared 25 sprite sheets covering five monster types and five evolution stages each. These show animation frames rather than full in-game gameplay footage.",
         ),
       ],
     },
