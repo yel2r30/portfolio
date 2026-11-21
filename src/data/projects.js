@@ -252,7 +252,7 @@ export const projects = [
       "A cooperative desert survival game built around a vehicle as a mobile base.",
     ),
     environment: "Unreal Engine 5",
-    team: text("팀 프로젝트 · UI/UX 담당", "Team project · UI/UX"),
+    team: text("3인 팀 · UI/UX 담당", "3-person team · UI/UX contributor"),
     status: text("개발 진행 중 · UI/UX 제작", "In development · UI/UX production"),
     history: [
       text("2026년 9월, 개발 중인 프로젝트에 UI/UX 담당으로 중도 합류",
@@ -265,12 +265,14 @@ export const projects = [
            "Crafting notebook, recipe information and material hover tooltip UI"),
     ],
     color: "#d9b895",
-    links: [
-      {
-        label: text("기존 플레이 영상 · YouTube (UI 개편 이전)", "Earlier gameplay video · YouTube (pre-redesign)"),
-        url: "https://www.youtube.com/watch?v=5l-P5u_edeE",
-      },
-    ],
+    video: {
+      youtubeId: "5l-P5u_edeE",
+      title: text("TRUNK · 기존 플레이 영상", "TRUNK · Earlier Gameplay Video"),
+      caption: text(
+        "UI 개편 이전에 촬영된 플레이 영상입니다. 현재 진행 중인 제 UI/UX 작업은 영상에 반영되지 않았습니다.",
+        "Gameplay recorded before the UI redesign. The UI/UX work I am currently contributing is not shown in this video.",
+      ),
+    },
     image: {
       src: "assets/trunk/TRUNK_title.png",
       alt: text("TRUNK 기존 타이틀 화면 · UI 개편 이전", "TRUNK title screen · Before the UI redesign"),
