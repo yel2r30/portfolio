@@ -74,11 +74,28 @@ export const projects = [
       text("AI 활용 프로그래밍 참여", "Contributed to AI-assisted programming"),
     ],
     color: "#d9d4e8",
-    images: [{
-      src: "assets/computer-escape/computer-escape-character-assets.svg",
-      alt: text("컴퓨터 탈출기 팀 프로젝트의 캐릭터 표정 일러스트 자료", "Character expression artwork from the Computer Escape team project"),
-      caption: text("2D 캐릭터 리소스 · 프로젝트 제작 자료", "2D character asset · Team production material"),
-    }],
+    images: [
+      {
+        src: "assets/computer-escape/computer-escape-digital-stage.webp",
+        alt: text("격자형 디지털 배경의 발판과 포털, 플레이어와 HP UI가 보이는 플레이 장면", "Gameplay with grid-themed platforms, portal, player and HP interface"),
+        caption: text("디지털 스테이지 · 발판과 포털", "Digital stage · Platforms and portal"),
+      },
+      {
+        src: "assets/computer-escape/computer-escape-forest-stage.webp",
+        alt: text("숲 배경의 스테이지와 캐릭터, 파란 포털이 보이는 플레이 화면", "Gameplay showing the character in a forest-themed stage with a blue portal"),
+        caption: text("숲 스테이지 · 이동과 액션", "Forest stage · Movement and action"),
+      },
+      {
+        src: "assets/computer-escape/computer-escape-character-assets.svg",
+        alt: text("컴퓨터 탈출기 팀 프로젝트의 캐릭터 표정 일러스트 자료", "Character expression artwork from the Computer Escape team project"),
+        caption: text("2D 캐릭터 리소스 · 프로젝트 제작 자료", "2D character asset · Team production material"),
+      },
+    ],
+    video: {
+      youtubeId: "HlOlBL3tFLw",
+      belowGallery: true,
+      title: text("컴퓨터 탈출기 · 플레이 영상", "Computer Escape · Gameplay Video"),
+    },
     achievements: [
       text("2025 TU 게임챌린지 우수상", "2025 TU Game Challenge · Excellence Award"),
       text("이전 지스타 전시", "Previously exhibited at G-STAR"),
