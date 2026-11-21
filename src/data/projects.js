@@ -235,6 +235,13 @@ export const projects = [
       text("AI 도구 활용 웹·Unity 프로토타입 검증", "Web and Unity prototype validation with AI-assisted tools"),
     ],
     color: "#e3d8cd",
+    image: {
+      src: "assets/just-blocked/just-blocked-cover.png",
+      alt: text(
+        "막았을뿐인데 표지 · 방패로 적의 공격을 막는 주인공과 거대한 바위 몬스터",
+        "Just Blocked cover artwork featuring a shield-bearing hero facing a giant stone monster",
+      ),
+    },
     history: [
       text("GPT Sites 웹 실험에서 시작해 Unity 전투 실험으로 이전", "Moved from a GPT Sites web experiment to a Unity combat prototype"),
     ],
