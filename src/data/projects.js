@@ -89,6 +89,12 @@ export const projects = [
     slug: "orbit",
     name: text("ORBIT", "ORBIT"),
     icon: "assets/orbit/ORBIT_app_icon.webp",
+    links: [
+      {
+        label: text("게임 플레이", "Play Game"),
+        url: "https://verse8.io/t5E8q9x",
+      },
+    ],
     category: "case",
     featured: true,
     homeOrder: 3,
