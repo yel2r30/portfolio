@@ -338,24 +338,80 @@ export const projects = [
   },
   {
     slug: "long-tailed-tit",
-    name: text("오목눈이의 역습", "오목눈이의 역습"),
+    name: text("오목눈이의 역습", "Revenge of the Long-tailed Tit"),
     category: "more",
-    summary: text("오프라인 보드게임", "An offline board game."),
-    environment: text("보드게임", "Board game"),
-    team: text("3인 팀", "Team of 3"),
+    summary: text(
+      "숨겨진 카드를 뒤집는 위험 선택과 주사위 판정으로 마지막 생존자를 가리는 파티형 카드게임",
+      "A competitive survival card game built around hidden-card risks, dice checks and reactive special cards.",
+    ),
+    environment: text("오프라인 카드·보드게임", "Physical card / board game"),
+    team: text("3인 팀 · 팀장", "3-person team · Team lead"),
+    status: text("실물 프로토타입 제작·전시", "Physical prototype produced and displayed"),
     roles: [
-      text("팀장 · 기획", "Team lead · Game design"),
-      text(
-        "AI 생성 카드 디자인 직접 수정",
-        "Manually refined AI-generated card designs",
-      ),
-    ],
-    history: [
-      text("자기설계교과 2회차", "Self-designed course, second iteration"),
+      text("팀장 · 게임 규칙 및 카드 효과 기획", "Team lead · Game rules and card effect design"),
+      text("카드 디자인 작업 및 AI 생성 이미지 보정", "Card design and refinement of AI-generated artwork"),
     ],
     color: "#e4d6d3",
-    cardRole: text("팀장 · 규칙 기획", "Team lead · Rule design"),
-    focus: "Rule Design / Board Game Design / Team Leadership",
+    image: {
+      src: "assets/long-tailed-tit/long-tailed-tit-title.webp",
+      alt: text("오목눈이의 역습 카드게임 타이틀 로고", "Revenge of the Long-tailed Tit card game title art"),
+    },
+    images: [
+      {
+        src: "assets/long-tailed-tit/long-tailed-tit-cards.webp",
+        alt: text("제작된 카드와 게임 설명서 실물 사진", "Physical prototype cards and rules printed on paper"),
+        caption: text("실물 카드 프로토타입", "Printed card prototype"),
+      },
+      {
+        src: "assets/long-tailed-tit/long-tailed-tit-table.webp",
+        alt: text("테이블 위에 전시된 게임 카드와 체험 준비물", "Tabletop display with card decks and game materials"),
+        caption: text("전시·체험 테이블", "Exhibition and playtest table"),
+      },
+      {
+        src: "assets/long-tailed-tit/long-tailed-tit-exhibition.webp",
+        alt: text("오목눈이의 역습 보드게임 제작 활동 전시 포스터", "Project poster presenting the card game's production process"),
+        caption: text("제작 과정 전시 포스터", "Development exhibition poster"),
+      },
+    ],
+    history: [
+      text("자기설계교과 2회차 · 팀 프로젝트", "Self-designed coursework, second project"),
+    ],
+    sections: {
+      gameplay: [
+        text(
+          "2~5명이 캐릭터 능력을 선택하고, 뒤집힌 '둥지' 카드에서 한 장씩 공개하며 생존 경쟁을 펼칩니다. 카드에는 공격·자폭·보급이 있으며, 주사위 판정에 따라 피해와 방어가 달라집니다.",
+          "For 2–5 players, each character has a distinct ability. Players reveal hidden nest cards in turn; attacks, self-damage and supplies interact with dice-based hit and defense checks.",
+        ),
+        text(
+          "특수 카드로 피해를 막거나 되돌리고, 상대의 카드와 차례를 방해할 수 있습니다. 대응 카드의 효과는 나중에 낸 것부터 처리되며 마지막까지 살아남은 사람이 승리합니다.",
+          "Special cards can block, reflect or redirect damage and interfere with opponents' cards or turns. Responses resolve in reverse play order; the last surviving player wins.",
+        ),
+      ],
+      contribution: [
+        text(
+          "3인 팀의 팀장을 맡아 생존 규칙과 카드 상호작용 기획에 참여하고, 카드 디자인을 제작·조정했습니다. AI로 생성한 카드 이미지는 직접 수정해 실물 카드 제작에 활용했습니다.",
+          "Led a three-person team, contributed to survival rules and card interactions, and worked on card designs. Refined AI-generated card artwork for the physical prototype.",
+        ),
+      ],
+      process: [
+        text(
+          "직업별 능력과 공격 카드의 주사위 난이도를 구분하고, 위험한 자폭 카드를 특수 카드 획득으로 연결해 선택의 보상을 설계했습니다.",
+          "Designed distinct character abilities and attack risk levels, connecting self-damage cards to special-card rewards for meaningful risk–reward decisions.",
+        ),
+        text(
+          "특수 카드 간 대응 순서를 규칙으로 정리한 뒤 카드와 설명서를 실물로 제작하고, 테이블 및 프로젝트 전시 형태로 선보였습니다.",
+          "Defined a reverse-order response system, produced physical cards and instructions, and presented the prototype in a project display.",
+        ),
+      ],
+      results: [
+        text(
+          "캐릭터 능력·주사위·특수 카드 대응을 결합한 실물 카드게임 프로토타입을 제작하고, 제작 과정과 구성물을 전시했습니다.",
+          "Produced and displayed a playable physical card-game prototype combining character abilities, dice checks and reactive card effects.",
+        ),
+      ],
+    },
+    cardRole: text("팀장 · 규칙 기획 · 카드 제작", "Team lead · Rule design · Card production"),
+    focus: "Board Game Design / Risk–Reward / Card Systems / Team Leadership",
   },
   {
     slug: "legend-sword",
