@@ -55,6 +55,11 @@ export const projects = [
   {
     slug: "computer-escape",
     name: text("컴퓨터 탈출기", "컴퓨터 탈출기"),
+    icon: "assets/computer-escape/computer-escape-icon.webp",
+    image: {
+      src: "assets/computer-escape/computer-escape-title.webp",
+      alt: text("컴퓨터 탈출기 타이틀 화면", "컴퓨터 탈출기 title screen"),
+    },
     category: "case",
     featured: true,
     homeOrder: 2,
@@ -319,6 +324,126 @@ export const projects = [
     cardRole: text("2026.09 합류 · 인벤토리·제작 UI/UX",
                    "Joined Sep 2026 · Inventory & crafting UI/UX"),
     focus: "Game UI / UX / Inventory / Crafting / Information Architecture",
+  },
+  {
+    slug: "grave-shot",
+    name: text("Grave Shot", "Grave Shot"),
+    category: "more",
+    summary: text(
+      "유령을 처치해 골드를 모으고, 성문을 수리하거나 무기를 강화하며 성지를 지키는 탑뷰 웨이브 디펜스",
+      "A top-down wave defense game: defeat ghosts, earn gold, repair gates or upgrade your weapon to protect the sanctuary.",
+    ),
+    environment: "Unity",
+    team: text("게임 기획·개발", "Game design and development"),
+    status: text("2026 TU 게임챌린지 장려상", "2026 TU Game Challenge · Encouragement Award"),
+    period: text("2026.07.04–07.06", "July 4–6, 2026"),
+    roles: [
+      text("게임 기획 · 전투 및 웨이브 구조 설계", "Game design · Combat and wave system"),
+      text("프로토타입 개발 및 플레이 검증", "Prototype development and gameplay testing"),
+    ],
+    color: "#c8c6d7",
+    image: {
+      src: "assets/grave-shot/grave-shot-title.webp",
+      alt: text("공동묘지 배경과 유령이 등장하는 Grave Shot 타이틀 화면", "Grave Shot title screen with a ghost in a graveyard"),
+    },
+    video: {
+      driveId: "1mSiT9IOKV2O5qtCxjwmNVTPpdltz0jr2",
+      title: text("Grave Shot · 플레이 영상", "Grave Shot · Gameplay Video"),
+      caption: text("게임 플레이 영상 (약 3분)", "Gameplay footage (about 3 minutes)"),
+      fallback: text("영상이 보이지 않나요? Google Drive에서 보기", "Video not loading? Watch on Google Drive"),
+    },
+    images: [
+      {
+        src: "assets/grave-shot/grave-shot-tutorial.webp",
+        alt: text("Grave Shot 이동·공격 방법 안내 화면", "Grave Shot movement and shooting instructions"),
+        caption: text("조작 안내 · 이동 및 조준 공격", "Controls · Movement and aimed shooting"),
+      },
+      {
+        src: "assets/grave-shot/grave-shot-wave.webp",
+        alt: text("세 성문을 지키는 Grave Shot 웨이브 1 플레이 장면", "Grave Shot wave 1 with three defensive gates"),
+        caption: text("웨이브 전투 · 성문 방어", "Wave combat · Gate defense"),
+      },
+      {
+        src: "assets/grave-shot/grave-shot-boss.webp",
+        alt: text("Grave Shot 5웨이브 보스 출현 장면", "Grave Shot boss appearance at wave 5"),
+        caption: text("5웨이브 · 보스 등장", "Wave 5 · Boss encounter"),
+      },
+      {
+        src: "assets/grave-shot/grave-shot-victory.webp",
+        alt: text("Grave Shot 승리 및 전투 결과 화면", "Grave Shot victory and results screen"),
+        caption: text("전투 결과 · 처치 수와 골드", "Results · Enemies defeated and gold"),
+      },
+    ],
+    achievements: [
+      text("제4회 TU 게임챌린지 2026 · 트랙 1-A (게임시스템) 장려상", "4th TU Game Challenge 2026 · Track 1-A (Game Systems), Encouragement Award"),
+    ],
+    links: [
+      {
+        label: text("TU 게임챌린지 수상 소개", "TU Game Challenge Award"),
+        url: "https://ai.tu.ac.kr/game/sub05_05.do?articleNo=428131&mode=view",
+      },
+    ],
+    sections: {
+      gameplay: [
+        text(
+          "플레이어는 공동묘지에서 몰려오는 유령을 조준 사격해 처치하고, A·B·C 세 성문과 성지를 방어합니다. 성문이 무너지면 성지가 공격받습니다.",
+          "Defeat incoming ghosts through aimed shooting while protecting three gates (A, B and C) and the sanctuary behind them.",
+        ),
+        text(
+          "처치 보상으로 얻은 골드를 성문 수리와 공격력 강화 사이에 배분하고, 15초 정비 시간 뒤 다음 웨이브에 대응합니다. 5웨이브마다 보스가 등장합니다.",
+          "Spend gold from defeated enemies on gate repairs or attack upgrades. Prepare for 15 seconds between waves; a boss arrives every fifth wave.",
+        ),
+      ],
+      contribution: [
+        text(
+          "유령 처치 → 골드 획득 → 성문 수리/무기 강화 → 다음 웨이브로 이어지는 반복 구조와 게임플레이를 기획하고, 프로토타입 개발과 검증에 참여했습니다.",
+          "Designed the ghost combat → gold → repairs/upgrades → next wave loop and contributed to prototyping and gameplay validation.",
+        ),
+      ],
+      process: [
+        text(
+          "방어할 성문과 플레이어 공격력을 같은 재화로 관리하게 하여, 생존을 위한 수리와 전투 효율을 위한 강화 사이에 선택을 만들었습니다.",
+          "Connected defensive repairs and offensive upgrades through one shared currency to create meaningful resource allocation decisions.",
+        ),
+      ],
+      results: [
+        text(
+          "3일간 핵심 플레이를 구현한 프로토타입으로 2026 TU 게임챌린지 게임시스템 부문 장려상을 수상했습니다.",
+          "Built a core gameplay prototype over three days and received an Encouragement Award in the 2026 TU Game Challenge game-systems track.",
+        ),
+      ],
+    },
+    cardRole: text("게임 기획 · 전투·웨이브 설계", "Game design · Combat and wave design"),
+    focus: "Top-down Action Defense / Wave System / Resource Management / Prototyping",
+  },
+  {
+    slug: "mimic-handle-with-care",
+    name: text("미믹 취급 주의", "Mimic: Handle with Care"),
+    category: "more",
+    summary: text(
+      "재밌넥 4기에서 4인 팀으로 참여한 게임 프로젝트",
+      "A four-person game project created during Jaemitnet cohort 4.",
+    ),
+    environment: text("게임 프로젝트 · 기획/UI", "Game project · Design/UI"),
+    team: text("재밌넥 4기 · 4인 팀", "Jaemitnet cohort 4 · 4-person team"),
+    roles: [
+      text("게임 기획 · UI 담당", "Game planning · UI"),
+    ],
+    color: "#e8c79d",
+    image: {
+      src: "assets/mimic/mimic-title.webp",
+      alt: text("미믹 취급 주의 게임 타이틀 이미지", "Mimic: Handle with Care title artwork"),
+    },
+    sections: {
+      contribution: [
+        text(
+          "재밌넥 4기 4인 팀 프로젝트에서 게임 기획과 UI 작업을 담당했습니다.",
+          "Contributed game planning and UI work in a four-person Jaemitnet cohort 4 project.",
+        ),
+      ],
+    },
+    cardRole: text("4인 팀 · 게임 기획/UI", "4-person team · Game planning/UI"),
+    focus: "Game Planning / UI / Team Project",
   },
   {
     slug: "frog-sokoban",

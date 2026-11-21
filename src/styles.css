@@ -846,3 +846,20 @@ dd {
   .project-video-frame { border-radius: 7px; }
   .project-video-section h2 { margin-bottom: 12px; }
 }
+/* Wide, un-cropped source title art for newly documented projects. */
+.project-detail--wide-media > .project-image {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #0d101a;
+}
+.project-detail--wide-media .project-gallery-item .project-image {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #0d101a;
+}
+.project-video-fallback {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: .83rem;
+}
+
