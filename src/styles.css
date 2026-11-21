@@ -744,3 +744,25 @@ dd {
   .project-app-icon--detail { width: 64px; height: 64px; border-radius: 13px; }
   .project-identity { gap: 14px; }
 }
+
+/* Physical board game: retain source photo ratios and avoid dominant portrait photos. */
+.project-detail--long-tailed-tit > .project-image {
+  aspect-ratio: 2000 / 1130;
+  object-fit: contain;
+  background: #f8f1e8;
+}
+.project-detail--long-tailed-tit .project-gallery-item:first-child {
+  grid-column: 1 / -1;
+}
+.project-detail--long-tailed-tit .project-gallery-item .project-image {
+  max-height: 530px;
+  object-fit: contain;
+  background: #f8f1e8;
+}
+.project-detail--long-tailed-tit .project-gallery-item:first-child .project-image {
+  max-height: 420px;
+}
+@media (max-width: 700px) {
+  .project-detail--long-tailed-tit .project-gallery-item:first-child { grid-column: auto; }
+  .project-detail--long-tailed-tit .project-gallery-item .project-image { max-height: 440px; }
+}
