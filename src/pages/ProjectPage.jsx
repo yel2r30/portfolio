@@ -25,7 +25,7 @@ export function ProjectPage({ project, language, content }) {
     /^https?:\/\//.test(link.url),
   );
   return (
-    <article className={`project-detail ${project.slug === "orbit" ? "project-detail--orbit" : ""} ${project.slug === "long-tailed-tit" ? "project-detail--long-tailed-tit" : ""} ${project.slug === "trunk" ? "project-detail--trunk" : ""}`}>
+    <article className={`project-detail ${project.slug === "orbit" ? "project-detail--orbit" : ""} ${project.slug === "long-tailed-tit" ? "project-detail--long-tailed-tit" : ""} ${project.slug === "trunk" ? "project-detail--trunk" : ""} ${["computer-escape", "grave-shot", "mimic-handle-with-care"].includes(project.slug) ? "project-detail--wide-media" : ""}`}>
       <a href="#/works" className="text-link">
         ← {content.back}
       </a>
@@ -54,20 +54,44 @@ export function ProjectPage({ project, language, content }) {
         language={language}
         placeholder={content.placeholder}
       />
-      {project.video?.youtubeId && /^[a-zA-Z0-9_-]{11}$/.test(project.video.youtubeId) && (
+      {((project.video?.youtubeId && /^[a-zA-Z0-9_-]{11}$/.test(project.video.youtubeId)) ||
+        (project.video?.driveId && /^[a-zA-Z0-9_-]{20,}$/.test(project.video.driveId))) && (
         <section className="project-video-section" aria-label={localize(project.video.title, language)}>
           <h2>{localize(project.video.title, language)}</h2>
           <div className="project-video-frame">
-            <iframe
-              src={`https://www.youtube-nocookie.com/embed/${project.video.youtubeId}?rel=0`}
-              title={localize(project.video.title, language)}
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
+            {project.video.driveId ? (
+              <iframe
+                src={`https://drive.google.com/file/d/${project.video.driveId}/preview`}
+                title={localize(project.video.title, language)}
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allow="autoplay; fullscreen"
+                allowFullScreen
+              />
+            ) : (
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${project.video.youtubeId}?rel=0`}
+                title={localize(project.video.title, language)}
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            )}
           </div>
-          <p className="project-video-caption">{localize(project.video.caption, language)}</p>
+          {project.video.caption && (
+            <p className="project-video-caption">{localize(project.video.caption, language)}</p>
+          )}
+          {project.video.driveId && project.video.fallback && (
+            <a
+              className="project-video-fallback text-link"
+              href={`https://drive.google.com/file/d/${project.video.driveId}/view`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {localize(project.video.fallback, language)} ↗
+            </a>
+          )}
         </section>
       )}
       <section className="detail-section">
