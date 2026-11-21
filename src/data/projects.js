@@ -244,24 +244,73 @@ export const projects = [
   {
     slug: "trunk",
     name: text("TRUNK", "TRUNK"),
+    icon: "assets/trunk/TRUNK_logo.png",
     category: "case",
     featured: true,
     summary: text(
-      "차량을 이동식 거점으로 삼아 운전·채집·제작을 이어가는 사막 협동 생존",
-      "Cooperative desert survival built around driving, gathering and crafting with a mobile vehicle base.",
+      "차량을 이동식 거점으로 삼아 사막을 탐험하는 협동 생존 게임",
+      "A cooperative desert survival game built around a vehicle as a mobile base.",
     ),
     environment: "Unreal Engine 5",
-    team: text("팀 프로젝트", "Team project"),
-    status: text("개발 중", "In development"),
-    roles: [
-      text(
-        "인벤토리 · 저장고 · 제작 메모장 · 정보 팝업 UI 제작·조정 참여",
-        "Contributed to inventory, storage, crafting notebook and information popup UI production and refinement",
-      ),
+    team: text("팀 프로젝트 · UI/UX 담당", "Team project · UI/UX"),
+    status: text("개발 진행 중 · UI/UX 제작", "In development · UI/UX production"),
+    history: [
+      text("2026년 9월, 개발 중인 프로젝트에 UI/UX 담당으로 중도 합류",
+           "Joined the ongoing project in September 2026 as a UI/UX contributor"),
     ],
-    color: "#e3ddc5",
-    cardRole: text("게임 UI 제작·조정", "Game UI production and refinement"),
-    focus: "Game UI / UX / Information Architecture",
+    roles: [
+      text("인벤토리·저장고 UI 디자인 및 배치 조정",
+           "Inventory and storage UI design and layout refinement"),
+      text("제작 메모장·레시피 정보·재료 호버 팝업 UI 제작",
+           "Crafting notebook, recipe information and material hover tooltip UI"),
+    ],
+    color: "#d9b895",
+    image: {
+      src: "assets/trunk/TRUNK_title.png",
+      alt: text("TRUNK 기존 타이틀 화면 · UI 개편 이전", "TRUNK title screen · Before the UI redesign"),
+    },
+    images: [
+      {
+        src: "assets/trunk/TRUNK_gameplay.png",
+        alt: text("사막 웜, 트럭과 생존 HUD가 보이는 기존 TRUNK 게임플레이",
+                  "Earlier TRUNK gameplay with a desert worm, truck and survival HUD"),
+        caption: text("사막 생존 플레이 · UI 개편 이전 화면",
+                      "Desert survival gameplay · Before the UI redesign"),
+      },
+    ],
+    sections: {
+      gameplay: [
+        text(
+          "트럭을 이동식 거점으로 삼아 위험한 사막을 탐색하는 협동 생존 게임입니다. 물자와 연료를 확보하고 채집·제작을 이어가며 사막 생물과 환경 위협에 대응합니다.",
+          "Cooperative desert survival built around a mobile truck base. Players manage supplies and fuel, gather resources, craft equipment and face desert creatures and environmental threats.",
+        ),
+      ],
+      contribution: [
+        text(
+          "2026년 9월, 개발 중이던 팀 프로젝트에 중간 합류해 UI/UX를 담당하고 있습니다. 인벤토리·저장고 패널과 슬롯 구성, 제작 메모장의 레시피·재료 정보, 호버 팝업의 디자인과 배치를 작업했습니다.",
+          "Joined the ongoing team project in September 2026 to work on UI/UX. Designed and refined inventory/storage panels and slots, crafting notebook recipe/material information, and hover tooltips.",
+        ),
+      ],
+      process: [
+        text(
+          "인벤토리·저장고의 슬롯 크기와 간격, 패널 위치를 조정하고 함께 열릴 때의 화면 구성을 점검했습니다.",
+          "Refined inventory/storage slot size, spacing and panel positioning, including their layout when opened together.",
+        ),
+        text(
+          "제작 메모장과 재료 호버 팝업의 정보 구조와 가독성을 개선하며 Unreal Engine UI 적용을 조정하고 있습니다.",
+          "Refining the crafting notebook and hover-tooltip information hierarchy and readability while iterating on Unreal Engine UI integration.",
+        ),
+      ],
+      results: [
+        text(
+          "현재 UI 제작·개선이 진행 중입니다. 첨부한 게임 화면은 UI 개편 전 버전이며, 새 UI를 보여주는 이미지는 추후 추가할 예정입니다.",
+          "UI production and refinement are ongoing. The gameplay images here predate the redesign; updated UI screenshots will be added later.",
+        ),
+      ],
+    },
+    cardRole: text("2026.09 합류 · 인벤토리·제작 UI/UX",
+                   "Joined Sep 2026 · Inventory & crafting UI/UX"),
+    focus: "Game UI / UX / Inventory / Crafting / Information Architecture",
   },
   {
     slug: "frog-sokoban",

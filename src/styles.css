@@ -805,3 +805,10 @@ dd {
   .card-ui-showcase { grid-template-columns: 1fr; }
   .card-ui-sample { max-width: 480px; }
 }
+
+/* Keep the full TRUNK title-menu screenshot visible without cropping. */
+.project-detail--trunk > .project-image {
+  aspect-ratio: 685 / 382;
+  object-fit: contain;
+  background: #1b130e;
+}
