@@ -74,6 +74,11 @@ export const projects = [
       text("AI 활용 프로그래밍 참여", "Contributed to AI-assisted programming"),
     ],
     color: "#d9d4e8",
+    images: [{
+      src: "assets/computer-escape/computer-escape-character-assets.svg",
+      alt: text("컴퓨터 탈출기 팀 프로젝트의 캐릭터 표정 일러스트 자료", "Character expression artwork from the Computer Escape team project"),
+      caption: text("2D 캐릭터 리소스 · 프로젝트 제작 자료", "2D character asset · Team production material"),
+    }],
     achievements: [
       text("2025 TU 게임챌린지 우수상", "2025 TU Game Challenge · Excellence Award"),
       text("이전 지스타 전시", "Previously exhibited at G-STAR"),
@@ -83,8 +88,14 @@ export const projects = [
     sections: {
       gameplay: [
         text(
-          "점프 차지와 낙하 위험을 고려하며 위로 올라가 탈출합니다.",
-          "Charge jumps and manage the risk of falling while climbing upward to escape.",
+          "점프를 최대 1초까지 차지해 높이를 조절하고, 낙하 위험을 감수하며 컴퓨터 안의 세계를 위로 올라가는 액션 플랫폼 게임입니다.",
+          "Charge jumps for up to one second to control height and climb through a computer world while managing the risk of falling.",
+        ),
+      ],
+      process: [
+        text(
+          "수정 기획서에서 세로 상승과 전투를 핵심으로 정리하고, 움직이는 발판·반동 블록·에러 블록 등은 난이도와 선택을 확장하는 기믹으로 설계했습니다. 문서의 모든 기믹이 최종 빌드에 구현됐다는 뜻은 아닙니다.",
+          "The revised design focused on vertical ascent and combat. Moving, bouncing and error blocks were planned to broaden player decisions; not every documented mechanic is verified in the final build.",
         ),
       ],
     },
@@ -686,11 +697,26 @@ export const projects = [
     team: text("그래픽 작업 참여", "Art contribution"),
     roles: [text("몬스터 도트 애니메이션", "Monster pixel animation")],
     color: "#d5d9dc",
+    image: {
+      src: "assets/world-first-kill/wfkc-monster-animation-cover.svg",
+      alt: text("늑대·고블린·슬라임·골렘 몬스터 도트 스프라이트 대표 이미지", "Pixel sprite preview of wolf, goblin, slime and golem monsters"),
+    },
+    images: [{
+      src: "assets/world-first-kill/wfkc-monster-animation-sheets.svg",
+      alt: text("늑대·슬라임·고블린·스켈레톤·골렘 애니메이션 프레임 시트", "Animation frame sheets for wolf, slime, goblin, skeleton and golem"),
+      caption: text("몬스터 5종의 도트 애니메이션 프레임", "Pixel animation frames for five monster types"),
+    }],
     sections: {
       contribution: [
         text(
-          "제공받은 원화를 바탕으로 몬스터 도트 애니메이션을 제작했습니다. 캐릭터 원화 및 게임 전체 디자인은 담당하지 않았습니다.",
-          "Created monster pixel animation from supplied concept art. Character concept art and overall game design were outside my role.",
+          "팀에서 제공받은 원화를 바탕으로 늑대·슬라임·고블린·스켈레톤·골렘의 몬스터 도트 애니메이션 프레임을 작업했습니다. 캐릭터 원화나 전체 게임 디자인은 담당하지 않았습니다.",
+          "Worked on pixel animation frames for wolf, slime, goblin, skeleton and golem monsters based on supplied character art. The original character concepts and overall game design were not my responsibility.",
+        ),
+      ],
+      results: [
+        text(
+          "몬스터 5종의 스프라이트 시트를 정리했습니다. 공개된 자료는 움직임 프레임 결과물이며 게임 전체 플레이 화면은 아닙니다.",
+          "Prepared sprite sheets for five monster types. These show animation frames, not a full in-game gameplay capture.",
         ),
       ],
     },
