@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { localize } from "../data/projects.js";
 import { ProjectMedia } from "../components/ProjectMedia.jsx";
 
@@ -12,6 +13,7 @@ function TextList({ items, language }) {
 }
 
 export function ProjectPage({ project, language, content }) {
+  const [evolutionStage, setEvolutionStage] = useState(5);
   const environment =
     typeof project.environment === "string"
       ? project.environment
@@ -54,27 +56,62 @@ export function ProjectPage({ project, language, content }) {
             <h2>{language === "en" ? "Monster Animation" : "몬스터 애니메이션"}</h2>
             <p>{language === "en" ? "Frame-by-frame pixel animation previews" : "프레임 기반 도트 애니메이션 미리보기"}</p>
           </div>
-          <div className="sprite-preview-grid">
-            {project.spritePreview.map((sprite) => (
-              <figure className="sprite-preview-item" key={sprite.src}>
-                <picture>
-                  <source
-                    media="(prefers-reduced-motion: reduce)"
-                    srcSet={`${import.meta.env.BASE_URL}${sprite.stillSrc}`}
-                    type="image/webp"
-                  />
-                  <img
-                    src={`${import.meta.env.BASE_URL}${sprite.src}`}
-                    width="128"
-                    height="128"
-                    alt={language === "en" ? `${localize(sprite.label, language)} animation` : `${localize(sprite.label, language)} 애니메이션`}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-                <figcaption>{localize(sprite.label, language)}</figcaption>
-              </figure>
+          <div className="sprite-evolution-picker" role="group" aria-label={language === "en" ? "Choose evolution stage" : "진화 단계 선택"}>
+            <span className="sprite-evolution-label">{language === "en" ? "Evolution" : "진화 단계"}</span>
+            {[1, 2, 3, 4, 5].map((stage) => (
+              <button
+                key={stage}
+                type="button"
+                className={`sprite-evolution-button${evolutionStage === stage ? " is-active" : ""}`}
+                aria-pressed={evolutionStage === stage}
+                onClick={() => setEvolutionStage(stage)}
+              >
+                {stage}
+              </button>
             ))}
+            <span className="sprite-evolution-progress" aria-live="polite">
+              {evolutionStage} / 5
+            </span>
+          </div>
+          <div className="sprite-preview-grid">
+            {project.spritePreview.map((sprite) => {
+              const selected = sprite.stages[evolutionStage - 1];
+              const label = `${localize(sprite.label, language)} · ${language === "en" ? "Evolution" : "진화"} ${evolutionStage}`;
+              return (
+                <figure className="sprite-preview-item" key={`${sprite.src}-${evolutionStage}`}>
+                  {selected.sheet ? (
+                    <span
+                      role="img"
+                      aria-label={label}
+                      className="sprite-preview-sheet"
+                      style={{
+                        backgroundImage: `url("${import.meta.env.BASE_URL}${selected.sheet}")`,
+                        "--sprite-frames": selected.frames,
+                        "--sprite-end": `-${selected.frames * 128}px`,
+                        "--sprite-duration": `${(selected.frames * 0.17).toFixed(2)}s`,
+                      }}
+                    />
+                  ) : (
+                    <picture>
+                      <source
+                        media="(prefers-reduced-motion: reduce)"
+                        srcSet={`${import.meta.env.BASE_URL}${selected.still}`}
+                        type="image/webp"
+                      />
+                      <img
+                        src={`${import.meta.env.BASE_URL}${selected.motion}`}
+                        width="128"
+                        height="128"
+                        alt={label}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </picture>
+                  )}
+                  <figcaption>{localize(sprite.label, language)}</figcaption>
+                </figure>
+              );
+            })}
           </div>
         </section>
       ) : (
