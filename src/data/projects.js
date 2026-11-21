@@ -494,7 +494,7 @@ export const projects = [
         text("4인 그룹의 팀장을 맡되 게임은 각자 제작하는 형태였습니다. 개인 게임의 규칙과 레벨을 설계하고, 두 버전의 40개 스테이지에 대한 풀이와 기믹 필요성을 분석했습니다.", "Led a four-person study group where each member built a separate game. Designed this game's rules and levels, analyzing solutions and mechanic necessity across 40 stage variants."),
       ],
       process: [
-        text("규칙 소개 → 기본 적용 → 조합 문제의 학습 흐름을 설계하고, 최단 풀이가 실제 기믹을 우회하는 사례와 스테이지 간 상태 계승 문제를 찾아 재검토 항목으로 기록했습니다.", "Structured learning from introducing a rule to combining it with others, and recorded bypass solutions and cross-stage state carryover issues for level redesign."),
+        text("규칙 학습 → 기본 적용 → 복합 퍼즐 순서로 구성하고, 자동 최단해 분석에서 의도한 기믹을 우회하는 경로를 찾아 재검토했습니다. 알고리즘의 해법 검증과 사람의 초견 난이도 평가는 별개로 구분했습니다.", "Structured rule introduction, practice and combined puzzles, then flagged shortcut solutions that bypass intended mechanics. Kept automated solution checks separate from first-time human difficulty testing."),
       ],
       results: [
         text("VER.1·VER.2를 포함한 40개 스테이지의 설계 및 해법 분석 자료를 마련했습니다. 튜토리얼과 최종 난이도 조정은 계속 진행 중입니다.", "Prepared design and solution-analysis materials for 40 stage variants across VER.1 and VER.2. Tutorial and final difficulty tuning remain in progress."),
@@ -524,7 +524,10 @@ export const projects = [
         text("일반 모드는 숨겨진 적 숫자와 내 숫자를 비교해 전투 또는 회피를 선택하는 위험 판단 방식입니다. 용사 모드는 숫자를 직접 추측하고 힌트로 정답을 좁히도록 구상했습니다.", "Normal mode uses fight-or-flee decisions against a hidden enemy number. Hero mode is designed around entering guesses and narrowing candidates through hints."),
       ],
       contribution: [
-        text("두 모드가 숫자 판정과 보상 규칙을 공유하도록 설계하고, 나침반·업다운·숫자 야구 등의 정보 아이템과 높은 점수를 위한 위험–보상 구조를 기획했습니다.", "Designed shared number-based outcomes across two modes and planned compass, up/down and number-baseball hints with risk–reward scoring."),
+        text("일반 모드는 싸움·회피를 고르는 위험 판단, 용사 모드는 힌트로 숫자를 좁히는 추리로 차별화했습니다. 두 방식이 승패 판정을 공유하되 아슬하게 이기면 더 큰 보상을 얻도록 설계했습니다.", "Separated the modes into fight-or-flee risk decisions and hint-driven deduction. Both share win/loss rules, with larger rewards for closer wins."),
+      ],
+      process: [
+        text("나침반·업다운·숫자 야구 등 모드별 정보 도구를 설계했습니다. 15개 스테이지와 무한 모드는 기획 범위이며 완료 기능으로 소개하지 않습니다.", "Scoped compass, up/down and number-match hints to each mode. The 15-stage campaign and endless mode are design scope, not verified completed features."),
       ],
       results: [
         text("기본 기능을 시험하는 프로토타입 단계에서 보류했습니다. 기획서의 15개 스테이지·무한 모드·마왕전은 전체 구현이 확인된 기능이 아닌 기획 범위입니다.", "Paused at the basic-feature prototype stage. The 15-stage campaign, endless mode and final boss are design scope, not verified completed features."),
@@ -561,7 +564,7 @@ export const projects = [
         text("팀장으로서 자동 생산 → 판매 → 투자, 농장 수확 → 공장 강화의 두 성장 순환을 설계하고, 공장·농장·도감 화면의 흐름을 기획했습니다.", "As team lead, designed the production → sales → investment and farming → upgrades loops, plus the factory, farm and collection-screen flow."),
       ],
       process: [
-        text("Canva에서 화면 구조와 생산·연구·강화 관계를 정리하고, 짧은 조작으로도 성장과 수집 보상이 체감되도록 성장 단계를 구분했습니다.", "Mapped UI flows and production/research/upgrade relationships in Canva, focusing on short interactions and visible collection/progression milestones."),
+        text("짧은 플레이와 원터치 조작을 목표로 Canva에서 공장·농장·도감 화면과 생산·연구·강화 흐름을 정리했습니다. 성장이 수치뿐 아니라 수집 보상으로 보이도록 설계했습니다.", "Planned for short sessions and one-touch interactions, mapping factory, farm and collection UI flows in Canva. Tied progression to visible collection rewards as well as numeric upgrades."),
       ],
       results: [
         text("4인 팀의 Unity 게임을 제작 완료했습니다. 기획서의 인테리어·알바·스토리는 확장안으로, 실제 빌드에 반영되지 않은 기능과 구분했습니다.", "Completed the four-person Unity project. Decoration, employee and story systems were planned extensions and are not presented as shipped features."),
@@ -650,8 +653,8 @@ export const projects = [
       ],
       contribution: [
         text(
-          "3인 팀의 팀장으로 게임 기획과 생존·카드 상호작용 규칙을 설계했습니다. 카드 UI에서는 카드명, 피해량, 발동 조건 및 효과 설명의 정보 배치와 레이아웃을 수정했습니다. 일러스트 생성은 담당하지 않았습니다.",
-          "Led a three-person team and designed gameplay and survival/card interaction rules. Refined card UI layout and the presentation of names, damage values, activation conditions and effect text. Illustration generation was not part of my role.",
+          "3인 팀장으로 게임 기획·규칙을 설계하고 카드명·피해량·발동 조건·효과 설명의 UI 배치를 수정했습니다. 일반 카드는 빨강, 직업 카드는 초록 뒷면과 역할별 앞면, 특수 카드는 검정으로 구분했으며 일러스트 제작은 담당하지 않았습니다.",
+          "Led game and rules design for a three-person team, refining card names, damage, triggers and effect layouts. General cards use red, role cards a shared green back with role-specific fronts, and special cards black; I did not create the illustrations.",
         ),
       ],
       process: [
