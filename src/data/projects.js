@@ -85,11 +85,6 @@ export const projects = [
         alt: text("숲 배경의 스테이지와 캐릭터, 파란 포털이 보이는 플레이 화면", "Gameplay showing the character in a forest-themed stage with a blue portal"),
         caption: text("숲 스테이지 · 이동과 액션", "Forest stage · Movement and action"),
       },
-      {
-        src: "assets/computer-escape/computer-escape-character-assets.svg",
-        alt: text("컴퓨터 탈출기 팀 프로젝트의 캐릭터 표정 일러스트 자료", "Character expression artwork from the Computer Escape team project"),
-        caption: text("2D 캐릭터 리소스 · 프로젝트 제작 자료", "2D character asset · Team production material"),
-      },
     ],
     video: {
       youtubeId: "HlOlBL3tFLw",
