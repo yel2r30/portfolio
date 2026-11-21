@@ -382,6 +382,32 @@ export const projects = [
     history: [
       text("자기설계교과 2회차 · 팀 프로젝트", "Self-designed coursework, second project"),
     ],
+    cardShowcase: [
+      {
+        label: text("일반 카드", "General Cards"),
+        note: text("빨강 · 깃털 공격 카드", "Red · Feather attack card"),
+        backSrc: "assets/long-tailed-tit/card-general-back.png",
+        frontSrc: "assets/long-tailed-tit/card-general-front.png",
+        backAlt: text("빨간색 일반 카드 뒷면", "Red back of a general card"),
+        frontAlt: text("깃털 1데미지 공격 카드 앞면", "Front of Feather, a one-damage attack card"),
+      },
+      {
+        label: text("직업 카드", "Role Cards"),
+        note: text("초록 뒷면 · 역할별 앞면", "Green back · Role-specific fronts"),
+        backSrc: "assets/long-tailed-tit/card-role-back.png",
+        frontSrc: "assets/long-tailed-tit/card-role-front.png",
+        backAlt: text("초록색 직업 카드 공통 뒷면", "Shared green back of a role card"),
+        frontAlt: text("보라색 마법눈이 직업 카드 앞면", "Purple mage role card front"),
+      },
+      {
+        label: text("특수 카드", "Special Cards"),
+        note: text("검정 뒷면 · 대응 효과", "Black back · Reactive effects"),
+        backSrc: "assets/long-tailed-tit/card-special-back.png",
+        frontSrc: "assets/long-tailed-tit/card-special-front.png",
+        backAlt: text("검정색 특수 카드 뒷면", "Black back of a special card"),
+        frontAlt: text("솜뭉치 가드 특수 카드 앞면", "Front of Fluff Guard special card"),
+      },
+    ],
     sections: {
       gameplay: [
         text(
