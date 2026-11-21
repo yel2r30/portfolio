@@ -349,7 +349,7 @@ export const projects = [
     status: text("실물 프로토타입 제작·전시", "Physical prototype produced and displayed"),
     roles: [
       text("팀장 · 게임 규칙 및 카드 효과 기획", "Team lead · Game rules and card effect design"),
-      text("카드 디자인 작업 및 AI 생성 이미지 보정", "Card design and refinement of AI-generated artwork"),
+      text("카드 UI 디자인·레이아웃 수정", "Card UI design and layout refinement"),
     ],
     color: "#e4d6d3",
     image: {
@@ -389,8 +389,8 @@ export const projects = [
       ],
       contribution: [
         text(
-          "3인 팀의 팀장을 맡아 생존 규칙과 카드 상호작용 기획에 참여하고, 카드 디자인을 제작·조정했습니다. AI로 생성한 카드 이미지는 직접 수정해 실물 카드 제작에 활용했습니다.",
-          "Led a three-person team, contributed to survival rules and card interactions, and worked on card designs. Refined AI-generated card artwork for the physical prototype.",
+          "3인 팀의 팀장으로 게임 기획과 생존·카드 상호작용 규칙을 설계하고, 카드 UI의 구성과 레이아웃을 수정했습니다. 일러스트 생성은 담당하지 않았습니다.",
+          "Led a three-person team, designed gameplay and survival/card interaction rules, and refined card UI layouts. Illustration generation was not part of my role.",
         ),
       ],
       process: [
@@ -410,7 +410,7 @@ export const projects = [
         ),
       ],
     },
-    cardRole: text("팀장 · 규칙 기획 · 카드 제작", "Team lead · Rule design · Card production"),
+    cardRole: text("팀장 · 게임 기획·규칙 설계 · 카드 UI", "Team lead · Game and rules design · Card UI"),
     focus: "Board Game Design / Risk–Reward / Card Systems / Team Leadership",
   },
   {
