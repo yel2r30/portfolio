@@ -25,7 +25,7 @@ export function ProjectPage({ project, language, content }) {
     /^https?:\/\//.test(link.url),
   );
   return (
-    <article className={`project-detail ${project.slug === "orbit" ? "project-detail--orbit" : ""} ${project.slug === "long-tailed-tit" ? "project-detail--long-tailed-tit" : ""} ${project.slug === "trunk" ? "project-detail--trunk" : ""} ${["computer-escape", "grave-shot", "mimic-handle-with-care"].includes(project.slug) ? "project-detail--wide-media" : ""}`}>
+    <article className={`project-detail ${project.slug === "orbit" ? "project-detail--orbit" : ""} ${project.slug === "long-tailed-tit" ? "project-detail--long-tailed-tit" : ""} ${project.slug === "trunk" ? "project-detail--trunk" : ""} ${project.slug === "rcc-factory" ? "project-detail--rcc-factory" : ""} ${["computer-escape", "grave-shot", "mimic-handle-with-care"].includes(project.slug) ? "project-detail--wide-media" : ""}`}>
       <a href="#/works" className="text-link">
         ← {content.back}
       </a>

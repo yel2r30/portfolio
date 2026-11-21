@@ -863,3 +863,13 @@ dd {
   font-size: .83rem;
 }
 
+/* Logo artwork is an image, not a cropped 16:10 screenshot. */
+.project-detail--rcc-factory > .project-image {
+  object-fit: contain;
+  background: #fcf6e9;
+  aspect-ratio: 3 / 2;
+}
+.project-card:has(.project-image[src*="rcc-factory-logo"]) .project-image {
+  object-fit: contain;
+  background: #fcf6e9;
+}
