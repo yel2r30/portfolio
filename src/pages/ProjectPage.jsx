@@ -106,13 +106,12 @@ export function ProjectPage({ project, language, content }) {
       ? project.environment
       : localize(project.environment, language);
   const sections = project.sections || {};
-  const pendingDetails = [
-    !sections.process?.length && content.pendingProcess,
-    !sections.results?.length && content.pendingResults,
-  ].filter(Boolean);
   const links = (project.links || []).filter((link) =>
     /^https?:\/\//.test(link.url),
   );
+  const roleSummary =
+    localize(project.cardRole, language) ||
+    project.roles?.map((role) => localize(role, language)).join(" / ");
   return (
     <article className={`project-detail ${project.slug === "orbit" ? "project-detail--orbit" : ""} ${project.slug === "long-tailed-tit" ? "project-detail--long-tailed-tit" : ""} ${project.slug === "trunk" ? "project-detail--trunk" : ""} ${project.slug === "rcc-factory" ? "project-detail--rcc-factory" : ""} ${["computer-escape", "grave-shot", "mimic-handle-with-care"].includes(project.slug) ? "project-detail--wide-media" : ""}`}>
       <a href="#/works" className="text-link">
@@ -308,15 +307,25 @@ export function ProjectPage({ project, language, content }) {
           </div>
         </section>
       )}
-      <section className="detail-section">
-        <h2>{content.contribution}</h2>
-        <div>
-          <TextList items={project.roles} language={language} />
-          {sections.contribution?.map((item, index) => (
-            <p key={index}>{localize(item, language)}</p>
-          ))}
-        </div>
-      </section>
+      {(sections.contribution?.length > 0 || project.roles?.length > 0) && (
+        <section className="detail-section">
+          <h2>{content.contribution}</h2>
+          <div>
+            {sections.contribution?.length > 0 ? (
+              <>
+                {roleSummary && (
+                  <p className="contribution-role">{roleSummary}</p>
+                )}
+                {sections.contribution.map((item, index) => (
+                  <p key={index}>{localize(item, language)}</p>
+                ))}
+              </>
+            ) : (
+              <TextList items={project.roles} language={language} />
+            )}
+          </div>
+        </section>
+      )}
       {["process", "results"]
         .filter((id) => sections[id]?.length)
         .map((id) => (
@@ -329,12 +338,6 @@ export function ProjectPage({ project, language, content }) {
             </div>
           </section>
         ))}
-      {pendingDetails.length > 0 && (
-        <section className="detail-section pending-section">
-          <h2>{content.additionalMaterials}</h2>
-          <div><p>{pendingDetails.join(" ")}</p></div>
-        </section>
-      )}
       {links.length > 0 && (
         <section className="detail-section">
           <h2>{content.links}</h2>
