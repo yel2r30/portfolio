@@ -257,7 +257,6 @@ nav a[aria-current] {
   font-size: 0.88rem;
   margin-bottom: 12px;
 }
-.card-body .meta,
 .card-body .role {
   font-size: 0.85rem;
   margin-bottom: 5px;
@@ -514,22 +513,19 @@ dd {
   font-size: 0.85rem;
 }
 .card-body .role {
-  font-size: 0.9rem;
-  margin-bottom: 12px;
-  line-height: 1.7;
-}
-.role-label {
-  display: block;
-  color: var(--muted);
-  font-size: 0.73rem;
-  margin-bottom: 3px;
-}
-.card-body .meta {
-  font-size: 0.82rem;
+  font-size: 0.86rem;
+  margin-bottom: 6px;
+  line-height: 1.55;
 }
 .card-body .card-outcome {
   font-size: 0.82rem;
-  margin-top: 12px;
+  margin-top: 8px;
+}
+.contribution-role {
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 18px;
 }
 .placeholder-name {
   font-weight: 500;
@@ -598,7 +594,6 @@ dd {
 .contact-label { color: var(--muted); font-size: 0.8rem; }
 .contact-value { color: var(--text); font-size: 1rem; overflow-wrap: anywhere; }
 .contact-link:hover .contact-value { text-decoration: underline; text-underline-offset: 4px; }
-.pending-section p { color: var(--muted); font-size: 0.88rem; }
 @media (max-width: 600px) {
   .contact-links { grid-template-columns: 1fr; }
 }
